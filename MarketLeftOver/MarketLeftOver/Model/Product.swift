@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Product: NSObject {
+class Product: NSObject, Codable {
 
     var id: String
     var name: String

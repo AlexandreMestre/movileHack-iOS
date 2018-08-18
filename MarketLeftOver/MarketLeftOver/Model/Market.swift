@@ -9,22 +9,33 @@
 import UIKit
 import CoreLocation
 
-class Market: NSObject {
+class Market: NSObject, Codable {
     
     var id: String
     var name: String
     var email: String
     var phoneNumber: String
     var CNPJ: String
-    var location: CLLocation?
     var logoImageURL: URL?
+    private var latitude: Double
+    private var longitude: Double
+    
+    var location: CLLocation? {
+        if let longitude = CLLocationDegrees(exactly: self.longitude),
+            let latitude = CLLocationDegrees(exactly: self.latitude) {
+            return CLLocation(latitude: latitude, longitude: longitude)
+        }
+        
+        return nil
+    }
 
     init(id: String,
          name: String,
          email: String,
          phoneNumber: String,
          CNPJ: String,
-         location: CLLocation?,
+         latitude: Double,
+         longitude: Double,
          logoImageURL: URL?) {
         
         self.id = id
@@ -32,7 +43,19 @@ class Market: NSObject {
         self.email = email
         self.phoneNumber = phoneNumber
         self.CNPJ = CNPJ
-        self.location = location
+        self.latitude = latitude
+        self.longitude = longitude
         self.logoImageURL = logoImageURL
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case email
+        case phoneNumber
+        case latitude
+        case longitude
+        case CNPJ
+        case logoImageURL
     }
 }
