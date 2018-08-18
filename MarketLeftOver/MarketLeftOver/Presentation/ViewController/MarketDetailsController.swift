@@ -14,9 +14,12 @@ class MarketDetailsController: UIViewController {
 
     var tableViewCellHeight = 66.0
     var tableViewHeaderHeight = 45.0
+    var navigationTitle = "Nome do mercado"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationItem.title = navigationTitle
 
         // Do any additional setup after loading the view.
     }

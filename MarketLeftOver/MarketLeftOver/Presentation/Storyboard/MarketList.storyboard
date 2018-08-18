@@ -39,24 +39,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwz-9Z-d6c">
-                                <rect key="frame" x="111" y="302" width="152" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="MKDet"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Mz-IP-ija">
+                                <rect key="frame" x="0.0" y="130" width="375" height="537"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.87058823529411766" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="7" id="h8V-ue-icG">
+                                    <size key="itemSize" width="167" height="140"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="17" minY="0.0" maxX="17" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="marketListCell" id="1Nm-bw-Tbf" customClass="MarketListCollectionCell" customModule="MarketLeftOver" customModuleProvider="target">
+                                        <rect key="frame" x="17" y="0.0" width="167" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXh-se-5GX" customClass="CardView" customModule="MarketLeftOver" customModuleProvider="target">
+                                                    <rect key="frame" x="7" y="6" width="153" height="127"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="iXh-se-5GX" firstAttribute="top" secondItem="1Nm-bw-Tbf" secondAttribute="top" constant="6" id="0O1-p4-5xp"/>
+                                            <constraint firstAttribute="trailing" secondItem="iXh-se-5GX" secondAttribute="trailing" constant="7" id="1uo-bk-5wv"/>
+                                            <constraint firstAttribute="bottom" secondItem="iXh-se-5GX" secondAttribute="bottom" constant="7" id="fsU-hj-hyD"/>
+                                            <constraint firstItem="iXh-se-5GX" firstAttribute="leading" secondItem="1Nm-bw-Tbf" secondAttribute="leading" constant="7" id="rD0-Do-qee"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <action selector="nextView:" destination="be0-uR-CUd" eventType="touchUpInside" id="Umz-Cs-Ufr"/>
+                                    <outlet property="dataSource" destination="be0-uR-CUd" id="aIm-U1-1YG"/>
+                                    <outlet property="delegate" destination="be0-uR-CUd" id="Cbd-cr-a5n"/>
                                 </connections>
-                            </button>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oGU-52-DP4" firstAttribute="bottom" secondItem="kms-mW-sjD" secondAttribute="bottom" id="7gH-ze-vcG"/>
                             <constraint firstItem="oGU-52-DP4" firstAttribute="trailing" secondItem="kms-mW-sjD" secondAttribute="trailing" id="7xD-AK-jhZ"/>
+                            <constraint firstItem="oGU-52-DP4" firstAttribute="trailing" secondItem="2Mz-IP-ija" secondAttribute="trailing" id="EQ7-rR-Qv9"/>
                             <constraint firstItem="kms-mW-sjD" firstAttribute="leading" secondItem="oGU-52-DP4" secondAttribute="leading" id="Kg9-Vg-jaR"/>
                             <constraint firstItem="kms-mW-sjD" firstAttribute="top" secondItem="oGU-52-DP4" secondAttribute="top" id="Pw7-l6-u07"/>
                             <constraint firstItem="kms-mW-sjD" firstAttribute="top" secondItem="PJ1-LC-WIG" secondAttribute="bottom" constant="-70" id="ZZQ-sc-XOz"/>
+                            <constraint firstItem="oGU-52-DP4" firstAttribute="bottom" secondItem="2Mz-IP-ija" secondAttribute="bottom" id="ZqE-kL-WSP"/>
                             <constraint firstItem="PJ1-LC-WIG" firstAttribute="leading" secondItem="oGU-52-DP4" secondAttribute="leading" constant="59" id="ax8-mi-9Qm"/>
+                            <constraint firstItem="2Mz-IP-ija" firstAttribute="top" secondItem="PJ1-LC-WIG" secondAttribute="bottom" constant="40" id="oVi-Wa-w9c"/>
+                            <constraint firstItem="2Mz-IP-ija" firstAttribute="leading" secondItem="oGU-52-DP4" secondAttribute="leading" id="qNc-kO-5QT"/>
                             <constraint firstItem="oGU-52-DP4" firstAttribute="trailing" secondItem="PJ1-LC-WIG" secondAttribute="trailing" constant="59" id="vDB-rr-EgG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oGU-52-DP4"/>
