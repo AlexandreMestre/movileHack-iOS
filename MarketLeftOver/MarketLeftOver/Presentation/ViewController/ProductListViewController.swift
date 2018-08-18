@@ -17,8 +17,12 @@ class ProductListViewController: UIViewController {
     var category: Category?
     
     var productList = [Product]()
+    var filteredProductList = [Product]()
+    
+    @IBOutlet weak var productListTableView: UITableView!
     
     // MARK: - Constants
+    let searchController = UISearchController(searchResultsController: nil)
     let productService = ServiceFactory.productService()
     let cellId = "productCell"
     
@@ -26,7 +30,8 @@ class ProductListViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.title = category?.name
-        
+
+        setupSearchController()
         
         if let category = self.category, let market = self.market {
             self.productList = productService.products(ofCategory: category, from: market)
@@ -43,17 +48,36 @@ class ProductListViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func setupSearchController() {
+        self.productListTableView.tableHeaderView = searchController.searchBar
+        searchController.searchResultsUpdater = self
+        definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Buscar produtos"
+        searchController.searchBar.barTintColor = #colorLiteral(red: 0.9960784314, green: 0.8705882353, blue: 0.4588235294, alpha: 1)
+    }
 
 }
 
 extension ProductListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.productList.count
+        
+        if isFiltering() {
+            return self.filteredProductList.count
+        } else {
+            return self.productList.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var product: Product
         
-        let product = self.productList[indexPath.row]
+        if isFiltering() {
+            product = self.filteredProductList[indexPath.row]
+        } else {
+            product = self.productList[indexPath.row]
+        }
         
         if let productCell = tableView.dequeueReusableCell(withIdentifier: cellId) as? ProductTableViewCell {
             
@@ -92,5 +116,37 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
 extension ProductListViewController: ProductCellDelegate {
     func addButtonTouched(onCellWith indexPath: IndexPath) {
         
+    }
+}
+
+extension ProductListViewController: UISearchResultsUpdating {
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filteredProductList = productList.filter({ (product: Product) -> Bool in
+            
+            var searchText = (searchController.searchBar.text!).lowercased()
+            searchText = searchText.folding(options: .diacriticInsensitive, locale: .current)
+            
+            var productName = product.name.lowercased()
+            productName = productName.folding(options: .diacriticInsensitive, locale: .current)
+            
+            var brand = product.brand.lowercased()
+            brand = brand.folding(options: .diacriticInsensitive, locale: .current)
+            
+            if productName.contains(searchText) || brand.contains(searchText) {
+                return true
+            } else {
+                return false
+            }
+        })
+        
+        self.productListTableView.reloadData()
     }
 }
