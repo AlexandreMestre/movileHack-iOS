@@ -33,6 +33,8 @@
 		423993BD2128C83C00EE0799 /* MarketDetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993BC2128C83C00EE0799 /* MarketDetailsTableCell.swift */; };
 		423993BF2128CBE800EE0799 /* MarketListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993BE2128CBE800EE0799 /* MarketListController.swift */; };
 		423993C12128CCE600EE0799 /* MarketListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993C02128CCE600EE0799 /* MarketListCollectionCell.swift */; };
+		423993C32128DBCD00EE0799 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993C22128DBCD00EE0799 /* GradientView.swift */; };
+		423993C52128DDCD00EE0799 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993C42128DDCD00EE0799 /* CustomLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		423993BC2128C83C00EE0799 /* MarketDetailsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailsTableCell.swift; sourceTree = "<group>"; };
 		423993BE2128CBE800EE0799 /* MarketListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListController.swift; sourceTree = "<group>"; };
 		423993C02128CCE600EE0799 /* MarketListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListCollectionCell.swift; sourceTree = "<group>"; };
+		423993C22128DBCD00EE0799 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		423993C42128DDCD00EE0799 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				423993AF2128B12900EE0799 /* CardView.swift */,
+				423993C42128DDCD00EE0799 /* CustomLabel.swift */,
+				423993C22128DBCD00EE0799 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,10 +287,12 @@
 			files = (
 				268E48802128A3D9008241B8 /* ShoppingCart.swift in Sources */,
 				423993C12128CCE600EE0799 /* MarketListCollectionCell.swift in Sources */,
+				423993C32128DBCD00EE0799 /* GradientView.swift in Sources */,
 				423993B02128B12900EE0799 /* CardView.swift in Sources */,
 				268E4857212896AF008241B8 /* AppDelegate.swift in Sources */,
 				268E487A21289EAA008241B8 /* Market.swift in Sources */,
 				268E48842128A93E008241B8 /* ProductServiceProtocol.swift in Sources */,
+				423993C52128DDCD00EE0799 /* CustomLabel.swift in Sources */,
 				268E48862128AA7E008241B8 /* Vc.swift in Sources */,
 				423993BF2128CBE800EE0799 /* MarketListController.swift in Sources */,
 				423993B72128BDC700EE0799 /* MarketDetailsController.swift in Sources */,

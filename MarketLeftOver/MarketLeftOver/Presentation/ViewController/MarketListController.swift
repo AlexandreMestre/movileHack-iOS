@@ -29,8 +29,10 @@ extension MarketListController: UICollectionViewDataSource, UICollectionViewDele
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "marketListCell", for: indexPath) as! MarketListCollectionCell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "marketListCell", for: indexPath) as? MarketListCollectionCell {
         return cell
+        }
+        return MarketListCollectionCell()
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -38,4 +40,5 @@ extension MarketListController: UICollectionViewDataSource, UICollectionViewDele
         performSegue(withIdentifier: "showMarketDetails", sender: nil)
     }
 
+    
 }

@@ -41,7 +41,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Mz-IP-ija">
                                 <rect key="frame" x="0.0" y="130" width="375" height="537"/>
-                                <color key="backgroundColor" red="0.99607843137254903" green="0.87058823529411766" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.84313725490000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="7" id="h8V-ue-icG">
                                     <size key="itemSize" width="167" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>

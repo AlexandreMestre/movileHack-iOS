@@ -36,9 +36,11 @@ extension MarketDetailsController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellList") as! MarketDetailsTableCell
-        cell.categoryNameLabel.text = "Section \(indexPath.row)"
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cellList") as? MarketDetailsTableCell {
+            cell.categoryNameLabel.text = "Section \(indexPath.row)"
+            return cell
+        }
+        return MarketDetailsTableCell()
 
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,11 +58,18 @@ extension MarketDetailsController: UITableViewDelegate, UITableViewDataSource{
         headerView.addSubview(titleLabel)
         return headerView
     }
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat(tableViewHeaderHeight)
     }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(tableViewCellHeight)
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        performSegue(withIdentifier: "showProductList", sender: nil)
     }
 }
 
@@ -71,7 +80,9 @@ extension MarketDetailsController: UICollectionViewDataSource, UICollectionViewD
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! MarketDetailsCollectionCell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? MarketDetailsCollectionCell {
         return cell
+        }
+        return MarketDetailsCollectionCell()
     }
 }

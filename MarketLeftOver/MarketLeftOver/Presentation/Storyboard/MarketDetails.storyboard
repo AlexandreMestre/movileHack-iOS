@@ -94,12 +94,17 @@
                                                     <rect key="frame" x="17" y="7" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQW-vM-b6I">
-                                                    <rect key="frame" x="75" y="22" width="177" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CATEGORY NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQW-vM-b6I" customClass="CustomLabel" customModule="MarketLeftOver" customModuleProvider="target">
+                                                    <rect key="frame" x="75" y="22" width="177" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                            <real key="value" value="18"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -127,11 +132,20 @@
                     <connections>
                         <outlet property="collectionView" destination="xSW-md-lVj" id="pIJ-DT-ca5"/>
                         <outlet property="tableView" destination="LhZ-Gk-6hF" id="xlD-0l-HiE"/>
+                        <segue destination="nlh-zq-5Mo" kind="show" identifier="showProductList" id="475-7o-0d6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVl-O3-W2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="125.4872563718141"/>
+        </scene>
+        <!--ProductList-->
+        <scene sceneID="hkk-yW-z1h">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductList" id="nlh-zq-5Mo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrh-nM-3IK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="99"/>
         </scene>
     </scenes>
 </document>
