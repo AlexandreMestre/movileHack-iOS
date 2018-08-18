@@ -1,5 +1,5 @@
 //
-//  MarkerDetailsCell.swift
+//  MarketDetailsTableCell.swift
 //  MarketLeftOver
 //
 //  Created by Larissa Ganaha on 18/08/18.
@@ -8,9 +8,12 @@
 
 import UIKit
 
-class MarkerDetailsCell: UITableViewCell {
+class MarketDetailsTableCell: UITableViewCell {
 
     @IBOutlet weak var categoryNameLabel: UILabel!
+    @IBOutlet weak var categoryIconImage: UIImageView!
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

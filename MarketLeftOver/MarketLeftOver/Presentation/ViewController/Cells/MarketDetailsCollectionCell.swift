@@ -9,6 +9,5 @@
 import UIKit
 
 class MarketDetailsCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var oilabel: UILabel!
     
 }
