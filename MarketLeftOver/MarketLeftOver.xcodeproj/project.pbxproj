@@ -22,11 +22,13 @@
 		268E48802128A3D9008241B8 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E487F2128A3D9008241B8 /* ShoppingCart.swift */; };
 		268E48822128A753008241B8 /* MarketServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48812128A753008241B8 /* MarketServiceProtocol.swift */; };
 		268E48842128A93E008241B8 /* ProductServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48832128A93E008241B8 /* ProductServiceProtocol.swift */; };
-		268E48862128AA7E008241B8 /* Vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48852128AA7E008241B8 /* Vc.swift */; };
 		268E48882128AAA3008241B8 /* MarketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268E48872128AAA3008241B8 /* MarketCollectionViewCell.xib */; };
 		268E488B2128AE46008241B8 /* MarketServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E488A2128AE46008241B8 /* MarketServiceMock.swift */; };
 		268E488D2128B27E008241B8 /* ProductServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E488C2128B27E008241B8 /* ProductServiceMock.swift */; };
 		268E488F2128B3F7008241B8 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E488E2128B3F7008241B8 /* ServiceFactory.swift */; };
+		268E48922128C206008241B8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48912128C206008241B8 /* UIView.swift */; };
+		268E48952128C4D0008241B8 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48942128C4D0008241B8 /* ProductTableViewCell.swift */; };
+		268E48972128C7E6008241B8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48962128C7E6008241B8 /* ProductListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,11 +49,13 @@
 		268E487F2128A3D9008241B8 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		268E48812128A753008241B8 /* MarketServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketServiceProtocol.swift; sourceTree = "<group>"; };
 		268E48832128A93E008241B8 /* ProductServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceProtocol.swift; sourceTree = "<group>"; };
-		268E48852128AA7E008241B8 /* Vc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vc.swift; sourceTree = "<group>"; };
 		268E48872128AAA3008241B8 /* MarketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketCollectionViewCell.xib; sourceTree = "<group>"; };
 		268E488A2128AE46008241B8 /* MarketServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketServiceMock.swift; sourceTree = "<group>"; };
 		268E488C2128B27E008241B8 /* ProductServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceMock.swift; sourceTree = "<group>"; };
 		268E488E2128B3F7008241B8 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		268E48912128C206008241B8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		268E48942128C4D0008241B8 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		268E48962128C7E6008241B8 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		268E4855212896AF008241B8 /* MarketLeftOver */ = {
 			isa = PBXGroup;
 			children = (
+				268E48902128C1BE008241B8 /* Extension */,
 				268E4868212896EC008241B8 /* Business */,
 				268E486921289724008241B8 /* Presentation */,
 				268E486D21289771008241B8 /* Model */,
@@ -108,6 +113,7 @@
 		268E486921289724008241B8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				268E48932128C4A5008241B8 /* Cells */,
 				268E486A21289730008241B8 /* ViewController */,
 				268E486B2128974B008241B8 /* Storyboard */,
 				268E486C21289756008241B8 /* Xibs */,
@@ -118,7 +124,7 @@
 		268E486A21289730008241B8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				268E48852128AA7E008241B8 /* Vc.swift */,
+				268E48962128C7E6008241B8 /* ProductListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -171,6 +177,22 @@
 				268E488C2128B27E008241B8 /* ProductServiceMock.swift */,
 			);
 			path = MockServiceImplementation;
+			sourceTree = "<group>";
+		};
+		268E48902128C1BE008241B8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				268E48912128C206008241B8 /* UIView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		268E48932128C4A5008241B8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				268E48942128C4D0008241B8 /* ProductTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,10 +274,12 @@
 			files = (
 				268E48802128A3D9008241B8 /* ShoppingCart.swift in Sources */,
 				268E4857212896AF008241B8 /* AppDelegate.swift in Sources */,
+				268E48972128C7E6008241B8 /* ProductListViewController.swift in Sources */,
 				268E487A21289EAA008241B8 /* Market.swift in Sources */,
 				268E48842128A93E008241B8 /* ProductServiceProtocol.swift in Sources */,
+				268E48922128C206008241B8 /* UIView.swift in Sources */,
 				268E488F2128B3F7008241B8 /* ServiceFactory.swift in Sources */,
-				268E48862128AA7E008241B8 /* Vc.swift in Sources */,
+				268E48952128C4D0008241B8 /* ProductTableViewCell.swift in Sources */,
 				268E48822128A753008241B8 /* MarketServiceProtocol.swift in Sources */,
 				268E488B2128AE46008241B8 /* MarketServiceMock.swift in Sources */,
 				268E487C2128A0C0008241B8 /* Product.swift in Sources */,
