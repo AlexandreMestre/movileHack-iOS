@@ -8,12 +8,12 @@
 
 import UIKit
 
-struct ShoppingCartItem {
+struct ShoppingCartItem: Codable {
     var product: Product
     var quantity: Int
 }
 
-class ShoppingCart: NSObject {
+class ShoppingCart: NSObject, Codable {
     var itens: [ShoppingCartItem]
     
     var totalPrice: Double {
