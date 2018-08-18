@@ -12,6 +12,7 @@ import CoreLocation
 protocol MarketServiceProtocol: class {
 
     func market(withId id: String) -> Market?
-    func markets(near location: CLLocation) -> [Market]    
+    func markets(near location: CLLocation) -> [Market]
+    func categories(of market: Market) -> [Category]
     
 }

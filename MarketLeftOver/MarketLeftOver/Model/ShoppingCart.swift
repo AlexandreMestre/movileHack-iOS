@@ -8,6 +8,25 @@
 
 import UIKit
 
-class ShoppingCart: NSObject {
+struct ShoppingCartItem {
+    var product: Product
+    var quantity: Int
+}
 
+class ShoppingCart: NSObject {
+    var itens: [ShoppingCartItem]
+    
+    var totalPrice: Double {
+        var _totalPrice: Double = 0
+        
+        for item in self.itens {
+            _totalPrice += item.product.currentPrice * Double(item.quantity)
+        }
+        
+        return _totalPrice
+    }
+    
+    init(itens: [ShoppingCartItem]) {
+        self.itens = itens
+    }
 }
