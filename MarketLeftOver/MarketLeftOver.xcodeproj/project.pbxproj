@@ -24,6 +24,9 @@
 		268E48842128A93E008241B8 /* ProductServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48832128A93E008241B8 /* ProductServiceProtocol.swift */; };
 		268E48862128AA7E008241B8 /* Vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48852128AA7E008241B8 /* Vc.swift */; };
 		268E48882128AAA3008241B8 /* MarketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268E48872128AAA3008241B8 /* MarketCollectionViewCell.xib */; };
+		268E488B2128AE46008241B8 /* MarketServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E488A2128AE46008241B8 /* MarketServiceMock.swift */; };
+		268E488D2128B27E008241B8 /* ProductServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E488C2128B27E008241B8 /* ProductServiceMock.swift */; };
+		268E488F2128B3F7008241B8 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E488E2128B3F7008241B8 /* ServiceFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		268E48832128A93E008241B8 /* ProductServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceProtocol.swift; sourceTree = "<group>"; };
 		268E48852128AA7E008241B8 /* Vc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vc.swift; sourceTree = "<group>"; };
 		268E48872128AAA3008241B8 /* MarketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketCollectionViewCell.xib; sourceTree = "<group>"; };
+		268E488A2128AE46008241B8 /* MarketServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketServiceMock.swift; sourceTree = "<group>"; };
+		268E488C2128B27E008241B8 /* ProductServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceMock.swift; sourceTree = "<group>"; };
+		268E488E2128B3F7008241B8 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 		268E4868212896EC008241B8 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				268E488E2128B3F7008241B8 /* ServiceFactory.swift */,
+				268E48892128AE12008241B8 /* MockServiceImplementation */,
 				268E487821289E81008241B8 /* ServicesProtocols */,
 			);
 			path = Business;
@@ -154,6 +162,15 @@
 				268E48832128A93E008241B8 /* ProductServiceProtocol.swift */,
 			);
 			path = ServicesProtocols;
+			sourceTree = "<group>";
+		};
+		268E48892128AE12008241B8 /* MockServiceImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				268E488A2128AE46008241B8 /* MarketServiceMock.swift */,
+				268E488C2128B27E008241B8 /* ProductServiceMock.swift */,
+			);
+			path = MockServiceImplementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +254,13 @@
 				268E4857212896AF008241B8 /* AppDelegate.swift in Sources */,
 				268E487A21289EAA008241B8 /* Market.swift in Sources */,
 				268E48842128A93E008241B8 /* ProductServiceProtocol.swift in Sources */,
+				268E488F2128B3F7008241B8 /* ServiceFactory.swift in Sources */,
 				268E48862128AA7E008241B8 /* Vc.swift in Sources */,
 				268E48822128A753008241B8 /* MarketServiceProtocol.swift in Sources */,
+				268E488B2128AE46008241B8 /* MarketServiceMock.swift in Sources */,
 				268E487C2128A0C0008241B8 /* Product.swift in Sources */,
 				268E487E2128A355008241B8 /* Category.swift in Sources */,
+				268E488D2128B27E008241B8 /* ProductServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
