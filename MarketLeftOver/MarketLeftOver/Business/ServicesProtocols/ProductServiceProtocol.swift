@@ -26,7 +26,7 @@ protocol ProductServiceProtocol: class {
     ///
     /// - Parameter category:
     /// - Returns: list of products
-    func products(ofCategory category: Category) -> [Product]
+    func products(ofCategory category: Category, from market: Market) -> [Product]
     
     /// All products of a given brand
     ///
