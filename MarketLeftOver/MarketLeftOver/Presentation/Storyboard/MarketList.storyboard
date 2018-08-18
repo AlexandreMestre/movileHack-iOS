@@ -9,21 +9,76 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Market List Controller-->
         <scene sceneID="SPj-pH-TKV">
             <objects>
-                <viewController id="be0-uR-CUd" sceneMemberID="viewController">
+                <viewController id="be0-uR-CUd" customClass="MarketListController" customModule="MarketLeftOver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pzm-DY-vl0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kms-mW-sjD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yz6-t8-k5Y">
+                                <rect key="frame" x="151" y="66" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha onde deseja comprar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ1-LC-WIG">
+                                <rect key="frame" x="59" y="70" width="257" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwz-9Z-d6c">
+                                <rect key="frame" x="111" y="302" width="152" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="MKDet"/>
+                                <connections>
+                                    <action selector="nextView:" destination="be0-uR-CUd" eventType="touchUpInside" id="Umz-Cs-Ufr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oGU-52-DP4" firstAttribute="bottom" secondItem="kms-mW-sjD" secondAttribute="bottom" id="7gH-ze-vcG"/>
+                            <constraint firstItem="oGU-52-DP4" firstAttribute="trailing" secondItem="kms-mW-sjD" secondAttribute="trailing" id="7xD-AK-jhZ"/>
+                            <constraint firstItem="kms-mW-sjD" firstAttribute="leading" secondItem="oGU-52-DP4" secondAttribute="leading" id="Kg9-Vg-jaR"/>
+                            <constraint firstItem="kms-mW-sjD" firstAttribute="top" secondItem="oGU-52-DP4" secondAttribute="top" id="Pw7-l6-u07"/>
+                            <constraint firstItem="kms-mW-sjD" firstAttribute="top" secondItem="PJ1-LC-WIG" secondAttribute="bottom" constant="-70" id="ZZQ-sc-XOz"/>
+                            <constraint firstItem="PJ1-LC-WIG" firstAttribute="leading" secondItem="oGU-52-DP4" secondAttribute="leading" constant="59" id="ax8-mi-9Qm"/>
+                            <constraint firstItem="oGU-52-DP4" firstAttribute="trailing" secondItem="PJ1-LC-WIG" secondAttribute="trailing" constant="59" id="vDB-rr-EgG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oGU-52-DP4"/>
                     </view>
+                    <connections>
+                        <segue destination="lce-PU-YNB" kind="show" identifier="showMarketDetails" id="Akn-rC-1Gp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6jU-92-36A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73" y="150"/>
+            <point key="canvasLocation" x="72.799999999999997" y="149.77511244377811"/>
+        </scene>
+        <!--MarketDetails-->
+        <scene sceneID="ewi-x4-r3q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MarketDetails" id="lce-PU-YNB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRk-ni-HnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="145"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="912" height="1622"/>
+    </resources>
 </document>

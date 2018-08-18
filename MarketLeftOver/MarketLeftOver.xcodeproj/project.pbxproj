@@ -24,6 +24,15 @@
 		268E48842128A93E008241B8 /* ProductServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48832128A93E008241B8 /* ProductServiceProtocol.swift */; };
 		268E48862128AA7E008241B8 /* Vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48852128AA7E008241B8 /* Vc.swift */; };
 		268E48882128AAA3008241B8 /* MarketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268E48872128AAA3008241B8 /* MarketCollectionViewCell.xib */; };
+		423993AB2128AFC700EE0799 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 423993A82128AFC600EE0799 /* Poppins-Medium.otf */; };
+		423993AC2128AFC700EE0799 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 423993A92128AFC600EE0799 /* Poppins-SemiBold.otf */; };
+		423993AD2128AFC700EE0799 /* Poppins-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 423993AA2128AFC700EE0799 /* Poppins-Light.otf */; };
+		423993B02128B12900EE0799 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993AF2128B12900EE0799 /* CardView.swift */; };
+		423993B22128B2EF00EE0799 /* MarketListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993B12128B2EF00EE0799 /* MarketListController.swift */; };
+		423993B52128B33B00EE0799 /* MarketListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993B42128B33B00EE0799 /* MarketListCell.swift */; };
+		423993B72128BDC700EE0799 /* MarketDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993B62128BDC700EE0799 /* MarketDetailsController.swift */; };
+		423993B92128BF0200EE0799 /* MarkerDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993B82128BF0200EE0799 /* MarkerDetailsCell.swift */; };
+		423993BB2128C2BB00EE0799 /* MarketDetailsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993BA2128C2BB00EE0799 /* MarketDetailsCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +55,15 @@
 		268E48832128A93E008241B8 /* ProductServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceProtocol.swift; sourceTree = "<group>"; };
 		268E48852128AA7E008241B8 /* Vc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vc.swift; sourceTree = "<group>"; };
 		268E48872128AAA3008241B8 /* MarketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketCollectionViewCell.xib; sourceTree = "<group>"; };
+		423993A82128AFC600EE0799 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
+		423993A92128AFC600EE0799 /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
+		423993AA2128AFC700EE0799 /* Poppins-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.otf"; sourceTree = "<group>"; };
+		423993AF2128B12900EE0799 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		423993B12128B2EF00EE0799 /* MarketListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListController.swift; sourceTree = "<group>"; };
+		423993B42128B33B00EE0799 /* MarketListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListCell.swift; sourceTree = "<group>"; };
+		423993B62128BDC700EE0799 /* MarketDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailsController.swift; sourceTree = "<group>"; };
+		423993B82128BF0200EE0799 /* MarkerDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDetailsCell.swift; sourceTree = "<group>"; };
+		423993BA2128C2BB00EE0799 /* MarketDetailsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailsCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +100,9 @@
 				268E486921289724008241B8 /* Presentation */,
 				268E486D21289771008241B8 /* Model */,
 				268E4856212896AF008241B8 /* AppDelegate.swift */,
+				423993AA2128AFC700EE0799 /* Poppins-Light.otf */,
+				423993A82128AFC600EE0799 /* Poppins-Medium.otf */,
+				423993A92128AFC600EE0799 /* Poppins-SemiBold.otf */,
 				268E485D212896B3008241B8 /* Assets.xcassets */,
 				268E485F212896B3008241B8 /* LaunchScreen.storyboard */,
 				268E4862212896B3008241B8 /* Info.plist */,
@@ -100,6 +121,7 @@
 		268E486921289724008241B8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				423993AE2128B11500EE0799 /* View */,
 				268E486A21289730008241B8 /* ViewController */,
 				268E486B2128974B008241B8 /* Storyboard */,
 				268E486C21289756008241B8 /* Xibs */,
@@ -111,6 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				268E48852128AA7E008241B8 /* Vc.swift */,
+				423993B12128B2EF00EE0799 /* MarketListController.swift */,
+				423993B62128BDC700EE0799 /* MarketDetailsController.swift */,
+				423993B32128B32500EE0799 /* Cells */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -154,6 +179,24 @@
 				268E48832128A93E008241B8 /* ProductServiceProtocol.swift */,
 			);
 			path = ServicesProtocols;
+			sourceTree = "<group>";
+		};
+		423993AE2128B11500EE0799 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				423993AF2128B12900EE0799 /* CardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		423993B32128B32500EE0799 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				423993B42128B33B00EE0799 /* MarketListCell.swift */,
+				423993B82128BF0200EE0799 /* MarkerDetailsCell.swift */,
+				423993BA2128C2BB00EE0799 /* MarketDetailsCollectionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,10 +261,13 @@
 				268E487321289A05008241B8 /* ProductList.storyboard in Resources */,
 				268E486F21289937008241B8 /* MarketList.storyboard in Resources */,
 				268E48882128AAA3008241B8 /* MarketCollectionViewCell.xib in Resources */,
+				423993AB2128AFC700EE0799 /* Poppins-Medium.otf in Resources */,
 				268E487521289B19008241B8 /* ShoppingCart.storyboard in Resources */,
 				268E4861212896B3008241B8 /* LaunchScreen.storyboard in Resources */,
+				423993AC2128AFC700EE0799 /* Poppins-SemiBold.otf in Resources */,
 				268E485E212896B3008241B8 /* Assets.xcassets in Resources */,
 				268E485C212896AF008241B8 /* Main.storyboard in Resources */,
+				423993AD2128AFC700EE0799 /* Poppins-Light.otf in Resources */,
 				268E4871212899E8008241B8 /* MarketDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,13 +280,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				268E48802128A3D9008241B8 /* ShoppingCart.swift in Sources */,
+				423993B02128B12900EE0799 /* CardView.swift in Sources */,
 				268E4857212896AF008241B8 /* AppDelegate.swift in Sources */,
 				268E487A21289EAA008241B8 /* Market.swift in Sources */,
+				423993B92128BF0200EE0799 /* MarkerDetailsCell.swift in Sources */,
 				268E48842128A93E008241B8 /* ProductServiceProtocol.swift in Sources */,
 				268E48862128AA7E008241B8 /* Vc.swift in Sources */,
+				423993B72128BDC700EE0799 /* MarketDetailsController.swift in Sources */,
+				423993B52128B33B00EE0799 /* MarketListCell.swift in Sources */,
 				268E48822128A753008241B8 /* MarketServiceProtocol.swift in Sources */,
+				423993BB2128C2BB00EE0799 /* MarketDetailsCollectionCell.swift in Sources */,
 				268E487C2128A0C0008241B8 /* Product.swift in Sources */,
 				268E487E2128A355008241B8 /* Category.swift in Sources */,
+				423993B22128B2EF00EE0799 /* MarketListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A62VCTXVB8;
+				DEVELOPMENT_TEAM = 7W6V69HBWC;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -403,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A62VCTXVB8;
+				DEVELOPMENT_TEAM = 7W6V69HBWC;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
