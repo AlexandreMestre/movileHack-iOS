@@ -23,7 +23,6 @@ class Market: NSObject {
          name: String,
          email: String,
          phoneNumber: String,
-         contactInfo: String,
          CNPJ: String,
          location: CLLocation?,
          logoImageURL: URL?) {
