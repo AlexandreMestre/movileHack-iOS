@@ -15,30 +15,35 @@ class MarketServiceMock: MarketServiceProtocol {
     
     private init() {}
     
-    func market(withId id: String) -> Market? {
-        return Market(id: id,
-                      name: "Great Market",
-                      email: "great@market.com",
-                      phoneNumber: "36057839",
-                      CNPJ: "XX.XXX.XXX/YYYY-ZZ",
-                      latitude: -22.8860352,
-                      longitude: -47.0598237,
-                      logoImageURL: URL(string: "https://upload.wikimedia.org/wikipedia/pt/d/dd/Logomarca_do_Pão_de_Açúcar_%28supermercado%29.png"))
+    func market(withId id: String, completion: @escaping (Market?) -> Void) {
+        completion(Market(id: id,
+                          name: "Great Market",
+                          email: "great@market.com",
+                          phoneNumber: "36057839",
+                          CNPJ: "XX.XXX.XXX/YYYY-ZZ",
+                          latitude: -22.8860352,
+                          longitude: -47.0598237,
+                          logoImageURL: URL(string: "https://upload.wikimedia.org/wikipedia/pt/d/dd/Logomarca_do_Pão_de_Açúcar_%28supermercado%29.png")))
     }
     
-    func markets(near location: CLLocation) -> [Market] {
-        if let market = self.market(withId: "xxxxxx") {
-            return [market, market, market]
-        }
-        
-        return [Market]()
+    func markets(near location: CLLocation, completion: @escaping ([Market]?) -> Void) {
+        let market = Market(id: "xxxx",
+                            name: "Great Market",
+                            email: "great@market.com",
+                            phoneNumber: "36057839",
+                            CNPJ: "XX.XXX.XXX/YYYY-ZZ",
+                            latitude: -22.8860352,
+                            longitude: -47.0598237,
+                            logoImageURL: URL(string: "https://upload.wikimedia.org/wikipedia/pt/d/dd/Logomarca_do_Pão_de_Açúcar_%28supermercado%29.png"))
+        completion([market, market, market])
     }
     
-    func categories(of market: Market) -> [Category] {
+    func categories(of market: Market, completion: @escaping ([Category]?) -> Void) {
         let foodCategory = Category(id: "xxxxx", name: "Food", iconURL: nil)
         let personalHygieneCategory = Category(id: "yyyyy", name: "Personal Hygiene", iconURL: nil)
         
-        return [foodCategory, personalHygieneCategory]
+        completion([foodCategory, personalHygieneCategory])
     }
+    
 
 }

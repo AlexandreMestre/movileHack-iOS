@@ -14,36 +14,35 @@ class ProductServiceMock: ProductServiceProtocol {
     
     private init() {}
     
-    func product(withId id: String) -> Product? {
-        return Product(id: "zzzz",
-                       name: "Chocolate", brand: "Nestle",
-                       dueDate: Date(), originalPrice: 10,
-                       currentPrice: 4, imageURL: URL(string: "https://cdn.shopify.com/s/files/1/0972/7116/products/nestle-crunch-bar.png"))
+    func product(withId id: String, completion: @escaping (Product?) -> Void) {
+        completion(Product(id: "zzzz",
+                           name: "Chocolate", brand: "Nestle",
+                           dueDate: Date(), originalPrice: 10,
+                           currentPrice: 4, imageURL: URL(string: "https://cdn.shopify.com/s/files/1/0972/7116/products/nestle-crunch-bar.png")))
     }
     
-    func bestProducts(from market: Market) -> [Product] {
-        if let product = self.product(withId: "zzzz") {
-            return [product, product, product]
-        }
-        
-        return [Product]()
+    func bestProducts(from market: Market, completion: @escaping ([Product]?) -> Void) {
+        let product = Product(id: "zzzz",
+                              name: "Chocolate", brand: "Nestle",
+                              dueDate: Date(), originalPrice: 10,
+                              currentPrice: 4, imageURL: URL(string: "https://cdn.shopify.com/s/files/1/0972/7116/products/nestle-crunch-bar.png"))
+        completion([product, product, product])
     }
     
-    func products(ofCategory category: Category, from market: Market) -> [Product] {
-        if let product = self.product(withId: "zzzz") {
-            return [product, product, product]
-        }
-        
-        return [Product]()
+    func products(ofCategory category: Category, from market: Market, completion: @escaping ([Product]?) -> Void) {
+        let product = Product(id: "zzzz",
+                              name: "Chocolate", brand: "Nestle",
+                              dueDate: Date(), originalPrice: 10,
+                              currentPrice: 4, imageURL: URL(string: "https://cdn.shopify.com/s/files/1/0972/7116/products/nestle-crunch-bar.png"))
+        completion([product, product, product])
     }
     
-    func products(ofBrand brand: String) -> [Product] {
-        if let product = self.product(withId: "zzzz") {
-            return [product, product, product]
-        }
-        
-        return [Product]()
+    func products(ofBrand brand: String, completion: @escaping ([Product]?) -> Void) {
+        let product = Product(id: "zzzz",
+                                 name: "Chocolate", brand: "Nestle",
+                                 dueDate: Date(), originalPrice: 10,
+                                 currentPrice: 4, imageURL: URL(string: "https://cdn.shopify.com/s/files/1/0972/7116/products/nestle-crunch-bar.png"))
+        completion([product, product, product])        
     }
-    
 
 }
