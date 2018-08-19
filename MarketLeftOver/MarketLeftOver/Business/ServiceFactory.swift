@@ -17,4 +17,8 @@ class ServiceFactory {
     static func productService() -> ProductServiceProtocol {
         return ProductServiceMock.instance
     }
+    
+    static func shoppingCartService() -> ShoppingCartServiceProtocol {
+        return ShoppingCartService.instance
+    }
 }

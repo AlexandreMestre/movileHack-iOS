@@ -29,8 +29,7 @@ class ProductListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.title = category?.name
-
+        setupNavigationBar()
         setupSearchController()
         
         if let category = self.category, let market = self.market {
@@ -49,6 +48,13 @@ class ProductListViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func setupNavigationBar() {
+        self.navigationItem.title = category?.name ?? "Produtos"
+        let cartButton = UIBarButtonItem(image: #imageLiteral(resourceName: "cart"), style: .plain, target: self, action: #selector(self.cartButtonTouched))
+        cartButton.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.navigationItem.rightBarButtonItem = cartButton
+    }
+    
     func setupSearchController() {
         self.productListTableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
@@ -57,7 +63,10 @@ class ProductListViewController: UIViewController {
         searchController.searchBar.placeholder = "Buscar produtos"
         searchController.searchBar.barTintColor = #colorLiteral(red: 0.9960784314, green: 0.8705882353, blue: 0.4588235294, alpha: 1)
     }
-
+    
+    @objc func cartButtonTouched() {
+        self.performSegue(withIdentifier: "shoppingCart", sender: self)
+    }
 }
 
 extension ProductListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -115,7 +124,15 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
 
 extension ProductListViewController: ProductCellDelegate {
     func addButtonTouched(onCellWith indexPath: IndexPath) {
+        var product: Product
         
+        if isFiltering() {
+            product = filteredProductList[indexPath.row]
+        } else {
+            product = productList[indexPath.row]
+        }
+        
+        ServiceFactory.shoppingCartService().add(product: product, quantity: 1)
     }
 }
 
