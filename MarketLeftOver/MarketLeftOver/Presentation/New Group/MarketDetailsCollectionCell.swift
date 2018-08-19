@@ -10,7 +10,7 @@ import UIKit
 
 class MarketDetailsCollectionCell: UICollectionViewCell {
     var indexPath: IndexPath?
-    var delegate: ProductCellDelegate?
+    weak var delegate: ProductCellDelegate?
     
     @IBOutlet weak var bestDealImage: UIImageView!
     @IBOutlet weak var bestDealNameLabel: UILabel!

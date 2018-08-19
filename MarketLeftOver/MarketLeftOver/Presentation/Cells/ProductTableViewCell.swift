@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol ProductCellDelegate {
+protocol ProductCellDelegate: class {
     func addButtonTouched(onCellWith indexPath: IndexPath)
 }
 
 class ProductTableViewCell: UITableViewCell {
     
-    var delegate: ProductCellDelegate?
+    weak var delegate: ProductCellDelegate?
     var indexPath: IndexPath?
 
     @IBOutlet weak var productImage: UIImageView!
