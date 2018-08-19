@@ -11,11 +11,11 @@ import Foundation
 class ServiceFactory {
     
     static func marketService() -> MarketServiceProtocol {
-        return MarketServiceMock.instance
+        return MarketService.instance
     }
     
     static func productService() -> ProductServiceProtocol {
-        return ProductServiceMock.instance
+        return ProductService.instance
     }
     
     static func shoppingCartService() -> ShoppingCartServiceProtocol {

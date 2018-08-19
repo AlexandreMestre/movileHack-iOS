@@ -14,7 +14,7 @@ protocol ProductServiceProtocol: class {
     ///
     /// - Parameter id: product's id
     /// - Returns: Product's object, if exists
-    func product(withId id: String, completion: @escaping (Product?)->Void)
+    func product(withId id: Int, completion: @escaping (Product?)->Void)
     
     /// Best products from a market (usually the one's with best price)
     ///
