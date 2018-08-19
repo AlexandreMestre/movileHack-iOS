@@ -23,25 +23,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kms-mW-sjD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background image" translatesAutoresizingMaskIntoConstraints="NO" id="kms-mW-sjD">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yz6-t8-k5Y">
-                                <rect key="frame" x="151" y="66" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha onde deseja comprar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ1-LC-WIG">
-                                <rect key="frame" x="59" y="66" width="257" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De onde deseja comprar?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ1-LC-WIG">
+                                <rect key="frame" x="59" y="56" width="257" height="24"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Mz-IP-ija">
-                                <rect key="frame" x="0.0" y="130" width="375" height="537"/>
-                                <color key="backgroundColor" red="0.99607843139999996" green="0.84313725490000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Mz-IP-ija">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="7" id="h8V-ue-icG">
                                     <size key="itemSize" width="167" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -56,7 +49,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="167" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXh-se-5GX" customClass="CardView" customModule="MarketLeftOver" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXh-se-5GX" customClass="CardView" customModule="MarketLeftOver" customModuleProvider="target">
                                                     <rect key="frame" x="7" y="6" width="153" height="127"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
@@ -65,14 +58,24 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5TX-hd-JGF">
+                                                    <rect key="frame" x="14" y="12" width="139" height="114"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="iXh-se-5GX" firstAttribute="top" secondItem="1Nm-bw-Tbf" secondAttribute="top" constant="6" id="0O1-p4-5xp"/>
                                             <constraint firstAttribute="trailing" secondItem="iXh-se-5GX" secondAttribute="trailing" constant="7" id="1uo-bk-5wv"/>
+                                            <constraint firstItem="5TX-hd-JGF" firstAttribute="leading" secondItem="iXh-se-5GX" secondAttribute="leading" constant="7" id="MnN-Zf-0yF"/>
+                                            <constraint firstItem="5TX-hd-JGF" firstAttribute="trailing" secondItem="iXh-se-5GX" secondAttribute="trailing" constant="-7" id="VvZ-Rr-7lK"/>
                                             <constraint firstAttribute="bottom" secondItem="iXh-se-5GX" secondAttribute="bottom" constant="7" id="fsU-hj-hyD"/>
                                             <constraint firstItem="iXh-se-5GX" firstAttribute="leading" secondItem="1Nm-bw-Tbf" secondAttribute="leading" constant="7" id="rD0-Do-qee"/>
+                                            <constraint firstItem="5TX-hd-JGF" firstAttribute="top" secondItem="iXh-se-5GX" secondAttribute="top" constant="6" id="us5-5o-WpM"/>
+                                            <constraint firstItem="5TX-hd-JGF" firstAttribute="bottom" secondItem="iXh-se-5GX" secondAttribute="bottom" constant="-7" id="vnR-fO-bQv"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="marketLogo" destination="5TX-hd-JGF" id="tAa-VS-l15"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -88,7 +91,7 @@
                             <constraint firstItem="oGU-52-DP4" firstAttribute="trailing" secondItem="2Mz-IP-ija" secondAttribute="trailing" id="EQ7-rR-Qv9"/>
                             <constraint firstItem="kms-mW-sjD" firstAttribute="leading" secondItem="oGU-52-DP4" secondAttribute="leading" id="Kg9-Vg-jaR"/>
                             <constraint firstItem="kms-mW-sjD" firstAttribute="top" secondItem="oGU-52-DP4" secondAttribute="top" id="Pw7-l6-u07"/>
-                            <constraint firstItem="kms-mW-sjD" firstAttribute="top" secondItem="PJ1-LC-WIG" secondAttribute="bottom" constant="-70" id="ZZQ-sc-XOz"/>
+                            <constraint firstItem="kms-mW-sjD" firstAttribute="top" secondItem="PJ1-LC-WIG" secondAttribute="bottom" constant="-60" id="ZZQ-sc-XOz"/>
                             <constraint firstItem="oGU-52-DP4" firstAttribute="bottom" secondItem="2Mz-IP-ija" secondAttribute="bottom" id="ZqE-kL-WSP"/>
                             <constraint firstItem="PJ1-LC-WIG" firstAttribute="leading" secondItem="oGU-52-DP4" secondAttribute="leading" constant="59" id="ax8-mi-9Qm"/>
                             <constraint firstItem="2Mz-IP-ija" firstAttribute="top" secondItem="PJ1-LC-WIG" secondAttribute="bottom" constant="40" id="oVi-Wa-w9c"/>
@@ -98,6 +101,7 @@
                         <viewLayoutGuide key="safeArea" id="oGU-52-DP4"/>
                     </view>
                     <connections>
+                        <outlet property="marketsCollectionView" destination="2Mz-IP-ija" id="CG8-dD-gof"/>
                         <segue destination="lce-PU-YNB" kind="show" identifier="showMarketDetails" id="Akn-rC-1Gp"/>
                     </connections>
                 </viewController>
@@ -115,6 +119,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="912" height="1622"/>
+        <image name="background image" width="912" height="1622"/>
     </resources>
 </document>

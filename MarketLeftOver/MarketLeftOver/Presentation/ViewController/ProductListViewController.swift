@@ -20,10 +20,12 @@ class ProductListViewController: UIViewController {
     var filteredProductList = [Product]()
     
     @IBOutlet weak var productListTableView: UITableView!
+    @IBOutlet weak var itemAddViewTopConstraint: NSLayoutConstraint!
     
     // MARK: - Constants
     let searchController = UISearchController(searchResultsController: nil)
     let productService = ServiceFactory.productService()
+    let itemAddedFeedBackViewHeight = 60
     let cellId = "productCell"
     
     override func viewDidLoad() {
@@ -56,6 +58,7 @@ class ProductListViewController: UIViewController {
     }
     
     func setupSearchController() {
+    
         self.productListTableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
         definesPresentationContext = true
@@ -97,13 +100,7 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
             
             productCell.productName.text = product.name
             if let imageURL = product.imageURL {
-                // TODO: - load image using kingFisher
-                do {
-                    let data = try Data(contentsOf: imageURL)
-                    productCell.productImage.image = UIImage(data: data)
-                } catch {
-                    
-                }
+                productCell.productImage.kf.setImage(with: imageURL)
             }
             
             let dateFormatter = DateFormatter()
@@ -128,6 +125,19 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
 }
 
 extension ProductListViewController: ProductCellDelegate {
+    func presentItemAddedFeedbackView() {
+        self.itemAddViewTopConstraint.constant = CGFloat(itemAddedFeedBackViewHeight)
+        
+        UIView.animate(withDuration: 0.8, animations: {
+            self.view.layoutIfNeeded()
+        }) { (_) in
+            self.itemAddViewTopConstraint.constant = 0
+            UIView.animate(withDuration: 0.8, delay: 0.5, options: .beginFromCurrentState, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+        }
+    }
+    
     func addButtonTouched(onCellWith indexPath: IndexPath) {
         var product: Product
         
@@ -138,6 +148,9 @@ extension ProductListViewController: ProductCellDelegate {
         }
         
         ServiceFactory.shoppingCartService().add(product: product, quantity: 1)
+        
+        presentItemAddedFeedbackView()
+        
     }
 }
 

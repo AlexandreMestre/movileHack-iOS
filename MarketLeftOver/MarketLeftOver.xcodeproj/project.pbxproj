@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2479D8B9444B6D5340ED4542 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		2479D8B9444B6D5340ED4542 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		265B49F8212917D500236FEE /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49F7212917D500236FEE /* ProductService.swift */; };
 		265B49FA2129240800236FEE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49F92129240800236FEE /* UIView.swift */; };
 		265B49FD2129243A00236FEE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49FC2129243A00236FEE /* UITableView.swift */; };
@@ -50,6 +50,8 @@
 		423993C72128E02B00EE0799 /* ShoppingCartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993C62128E02B00EE0799 /* ShoppingCartController.swift */; };
 		423993C92128E92500EE0799 /* ShoppingCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993C82128E92500EE0799 /* ShoppingCartCell.swift */; };
 		423993CB2128EDF300EE0799 /* CheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993CA2128EDF300EE0799 /* CheckoutController.swift */; };
+		42EA03B8212916460022C5E8 /* FinishedModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EA03B7212916460022C5E8 /* FinishedModal.storyboard */; };
+		42EA03BA212918530022C5E8 /* FinishedModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EA03B9212918530022C5E8 /* FinishedModalController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +99,8 @@
 		423993C62128E02B00EE0799 /* ShoppingCartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartController.swift; sourceTree = "<group>"; };
 		423993C82128E92500EE0799 /* ShoppingCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
 		423993CA2128EDF300EE0799 /* CheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutController.swift; sourceTree = "<group>"; };
+		42EA03B7212916460022C5E8 /* FinishedModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinishedModal.storyboard; sourceTree = "<group>"; };
+		42EA03B9212918530022C5E8 /* FinishedModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedModalController.swift; sourceTree = "<group>"; };
 		71176ED03CBCD6DA7FBFE7E3 /* Pods-MarketLeftOver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketLeftOver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver.debug.xcconfig"; sourceTree = "<group>"; };
 		BA486C7A2437D9FF601B94AA /* Pods_MarketLeftOver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketLeftOver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2479D8B9444B6D5340ED4542 /* (null) in Frameworks */,
+				2479D8B9444B6D5340ED4542 /* BuildFile in Frameworks */,
 				2D7B9993585C75ECB74A5BA3 /* Pods_MarketLeftOver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +194,7 @@
 				423993BE2128CBE800EE0799 /* MarketListController.swift */,
 				423993CA2128EDF300EE0799 /* CheckoutController.swift */,
 				423993C62128E02B00EE0799 /* ShoppingCartController.swift */,
+				42EA03B9212918530022C5E8 /* FinishedModalController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				268E487221289A05008241B8 /* ProductList.storyboard */,
 				268E487421289B19008241B8 /* ShoppingCart.storyboard */,
 				268E487621289E50008241B8 /* Checkout.storyboard */,
+				42EA03B7212916460022C5E8 /* FinishedModal.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -299,7 +305,7 @@
 				268E4850212896AF008241B8 /* Frameworks */,
 				268E4851212896AF008241B8 /* Resources */,
 				7C93D7E41F8673CCD5EF0E0D /* [CP] Embed Pods Frameworks */,
-				F60816C0AAD510F44DE6F6DF /* [CP] Copy Pods Resources */,
+				AAA4ABA1DA98501411A468F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,6 +364,7 @@
 				268E485E212896B3008241B8 /* Assets.xcassets in Resources */,
 				268E485C212896AF008241B8 /* Main.storyboard in Resources */,
 				423993AD2128AFC700EE0799 /* Poppins-Light.otf in Resources */,
+				42EA03B8212916460022C5E8 /* FinishedModal.storyboard in Resources */,
 				268E4871212899E8008241B8 /* MarketDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,17 +398,19 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F60816C0AAD510F44DE6F6DF /* [CP] Copy Pods Resources */ = {
+		AAA4ABA1DA98501411A468F7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -430,6 +439,7 @@
 				265B49FA2129240800236FEE /* UIView.swift in Sources */,
 				423993C32128DBCD00EE0799 /* GradientView.swift in Sources */,
 				423993B02128B12900EE0799 /* CardView.swift in Sources */,
+				42EA03BA212918530022C5E8 /* FinishedModalController.swift in Sources */,
 				268E48AD2129014A008241B8 /* ProductServiceMock.swift in Sources */,
 				268E4857212896AF008241B8 /* AppDelegate.swift in Sources */,
 				268E48AC2129014A008241B8 /* ShoppingCartServiceProtocol.swift in Sources */,
@@ -600,10 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62VCTXVB8;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.unicamp.alexandremestre.MarketLeftOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -619,10 +626,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62VCTXVB8;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.unicamp.alexandremestre.MarketLeftOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
