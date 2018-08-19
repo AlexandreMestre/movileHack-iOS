@@ -33,15 +33,13 @@ class ProductListViewController: UIViewController {
         setupSearchController()
         
         if let category = self.category, let market = self.market {
-            self.productList = productService.products(ofCategory: category, from: market)
-        } else {
-            // TODO: - remove after debug
-            let market = ServiceFactory.marketService().market(withId: "xxx")!
-            let category = ServiceFactory.marketService().categories(of: market).first!
-            
-            self.productList = productService.products(ofCategory: category, from: market)
+            productService.products(ofCategory: category, from: market) { (products) in
+                if let products = products {
+                    self.productList = products
+                    self.productListTableView.reloadData()
+                }
+            }
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
