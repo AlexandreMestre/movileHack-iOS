@@ -15,6 +15,7 @@ class MarketDetailsController: UIViewController {
     var tableViewHeaderHeight = 45.0
     var navigationTitle = "Mercado"
     let listCellID = "cellList"
+    let itemAddedFeedBackViewHeight = 60
     
     var market: Market?
     
@@ -23,6 +24,7 @@ class MarketDetailsController: UIViewController {
     var bestDeals = [Product]()
     var bestDeasCollectionView: UICollectionView?
     
+    @IBOutlet weak var feedBackViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var categoriesTableView: UITableView!
     @IBOutlet weak var bestDealsCollectionView: UICollectionView!
     
@@ -64,6 +66,19 @@ class MarketDetailsController: UIViewController {
                 destination.market = self.market
                 destination.category = category
             }
+        }
+    }
+    
+    func presentItemAddedFeedbackView() {
+        self.feedBackViewTopConstraint.constant = CGFloat(itemAddedFeedBackViewHeight)
+        
+        UIView.animate(withDuration: 0.8, animations: {
+            self.view.layoutIfNeeded()
+        }) { (_) in
+            self.feedBackViewTopConstraint.constant = 0
+            UIView.animate(withDuration: 0.8, delay: 0.5, options: .beginFromCurrentState, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: nil)
         }
     }
 }
@@ -127,6 +142,9 @@ extension MarketDetailsController: UICollectionViewDataSource, UICollectionViewD
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? MarketDetailsCollectionCell {
             let product = bestDeals[indexPath.row]
             
+            cell.indexPath = indexPath
+            cell.delegate = self
+            
             cell.bestDealNameLabel.text = product.name
             
             if let imageURL = product.imageURL {
@@ -146,5 +164,15 @@ extension MarketDetailsController: UICollectionViewDataSource, UICollectionViewD
         }
         
         return MarketDetailsCollectionCell()
+    }
+}
+
+extension MarketDetailsController: ProductCellDelegate {
+    func addButtonTouched(onCellWith indexPath: IndexPath) {
+        let product = bestDeals[indexPath.row]
+        
+        ServiceFactory.shoppingCartService().add(product: product, quantity: 1)
+        
+        presentItemAddedFeedbackView()
     }
 }

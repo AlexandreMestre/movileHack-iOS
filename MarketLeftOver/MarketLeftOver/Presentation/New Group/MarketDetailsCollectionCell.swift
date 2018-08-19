@@ -9,6 +9,9 @@
 import UIKit
 
 class MarketDetailsCollectionCell: UICollectionViewCell {
+    var indexPath: IndexPath?
+    var delegate: ProductCellDelegate?
+    
     @IBOutlet weak var bestDealImage: UIImageView!
     @IBOutlet weak var bestDealNameLabel: UILabel!
     @IBOutlet weak var bestDealDueDateLabel: UILabel!
@@ -20,7 +23,9 @@ class MarketDetailsCollectionCell: UICollectionViewCell {
     }
 
     @IBAction func bestDealPressed(_ sender: Any) {
-        print("Best Deal Pressed")
+        if let index = self.indexPath {
+            delegate?.addButtonTouched(onCellWith: index)
+        }
     }
 
 }

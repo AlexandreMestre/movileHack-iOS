@@ -187,19 +187,40 @@
                                     <outlet property="delegate" destination="mMD-8C-lsu" id="bIp-L8-DGp"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGB-Sc-wFf">
+                                <rect key="frame" x="-0.5" y="667" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item adicionado ao carrinho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBp-bx-TKI">
+                                        <rect key="frame" x="79" y="19" width="218" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.31372549020000001" green="0.87058823529999996" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bBp-bx-TKI" firstAttribute="centerX" secondItem="aGB-Sc-wFf" secondAttribute="centerX" id="Xrg-Po-AxX"/>
+                                    <constraint firstAttribute="height" constant="60" id="avQ-dg-jTV"/>
+                                    <constraint firstItem="bBp-bx-TKI" firstAttribute="centerY" secondItem="aGB-Sc-wFf" secondAttribute="centerY" id="vQ4-cw-4Gl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="haH-aj-xzc" firstAttribute="bottom" secondItem="LhZ-Gk-6hF" secondAttribute="bottom" id="4Hh-ID-Umu"/>
                             <constraint firstItem="LhZ-Gk-6hF" firstAttribute="top" secondItem="haH-aj-xzc" secondAttribute="top" id="6tO-Ak-I7k"/>
+                            <constraint firstItem="LhZ-Gk-6hF" firstAttribute="bottom" secondItem="aGB-Sc-wFf" secondAttribute="top" id="CTS-eD-eI9"/>
+                            <constraint firstItem="aGB-Sc-wFf" firstAttribute="centerX" secondItem="DBy-59-ze5" secondAttribute="centerX" id="KwL-rv-gf2"/>
                             <constraint firstItem="LhZ-Gk-6hF" firstAttribute="leading" secondItem="haH-aj-xzc" secondAttribute="leading" id="c5E-N4-dRn"/>
                             <constraint firstAttribute="trailing" secondItem="LhZ-Gk-6hF" secondAttribute="trailing" id="hdI-Cv-fPU"/>
+                            <constraint firstItem="aGB-Sc-wFf" firstAttribute="width" secondItem="DBy-59-ze5" secondAttribute="width" id="sB0-q5-iBe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="haH-aj-xzc"/>
                     </view>
                     <connections>
                         <outlet property="bestDealsCollectionView" destination="xSW-md-lVj" id="LcV-83-brZ"/>
                         <outlet property="categoriesTableView" destination="LhZ-Gk-6hF" id="nox-4e-rWC"/>
+                        <outlet property="feedBackViewTopConstraint" destination="CTS-eD-eI9" id="1Zb-2a-xr2"/>
                         <segue destination="nlh-zq-5Mo" kind="show" identifier="showProductList" id="475-7o-0d6"/>
                     </connections>
                 </viewController>
