@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2479D8B9444B6D5340ED4542 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		268E4857212896AF008241B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E4856212896AF008241B8 /* AppDelegate.swift */; };
 		268E485C212896AF008241B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268E485A212896AF008241B8 /* Main.storyboard */; };
 		268E485E212896B3008241B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268E485D212896B3008241B8 /* Assets.xcassets */; };
@@ -22,8 +23,15 @@
 		268E48802128A3D9008241B8 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E487F2128A3D9008241B8 /* ShoppingCart.swift */; };
 		268E48822128A753008241B8 /* MarketServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48812128A753008241B8 /* MarketServiceProtocol.swift */; };
 		268E48842128A93E008241B8 /* ProductServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48832128A93E008241B8 /* ProductServiceProtocol.swift */; };
-		268E48862128AA7E008241B8 /* Vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48852128AA7E008241B8 /* Vc.swift */; };
-		268E48882128AAA3008241B8 /* MarketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268E48872128AAA3008241B8 /* MarketCollectionViewCell.xib */; };
+		268E48AB2129014A008241B8 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48A521290149008241B8 /* ServiceFactory.swift */; };
+		268E48AC2129014A008241B8 /* ShoppingCartServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48A621290149008241B8 /* ShoppingCartServiceProtocol.swift */; };
+		268E48AD2129014A008241B8 /* ProductServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48A721290149008241B8 /* ProductServiceMock.swift */; };
+		268E48AE2129014A008241B8 /* MarketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48A821290149008241B8 /* MarketService.swift */; };
+		268E48AF2129014A008241B8 /* MarketServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48A921290149008241B8 /* MarketServiceMock.swift */; };
+		268E48B02129014A008241B8 /* ShoppingCartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48AA21290149008241B8 /* ShoppingCartService.swift */; };
+		268E48B5212901CF008241B8 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48B4212901CF008241B8 /* ProductTableViewCell.swift */; };
+		268E48B72129020C008241B8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48B62129020C008241B8 /* ProductListViewController.swift */; };
+		2D7B9993585C75ECB74A5BA3 /* Pods_MarketLeftOver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA486C7A2437D9FF601B94AA /* Pods_MarketLeftOver.framework */; };
 		423993AB2128AFC700EE0799 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 423993A82128AFC600EE0799 /* Poppins-Medium.otf */; };
 		423993AC2128AFC700EE0799 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 423993A92128AFC600EE0799 /* Poppins-SemiBold.otf */; };
 		423993AD2128AFC700EE0799 /* Poppins-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 423993AA2128AFC700EE0799 /* Poppins-Light.otf */; };
@@ -41,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E3B49743379ACE8A01A9709 /* Pods-MarketLeftOver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketLeftOver.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver.release.xcconfig"; sourceTree = "<group>"; };
 		268E4853212896AF008241B8 /* MarketLeftOver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketLeftOver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		268E4856212896AF008241B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		268E485B212896AF008241B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,8 +67,14 @@
 		268E487F2128A3D9008241B8 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		268E48812128A753008241B8 /* MarketServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketServiceProtocol.swift; sourceTree = "<group>"; };
 		268E48832128A93E008241B8 /* ProductServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceProtocol.swift; sourceTree = "<group>"; };
-		268E48852128AA7E008241B8 /* Vc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vc.swift; sourceTree = "<group>"; };
-		268E48872128AAA3008241B8 /* MarketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketCollectionViewCell.xib; sourceTree = "<group>"; };
+		268E48A521290149008241B8 /* ServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		268E48A621290149008241B8 /* ShoppingCartServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartServiceProtocol.swift; sourceTree = "<group>"; };
+		268E48A721290149008241B8 /* ProductServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductServiceMock.swift; sourceTree = "<group>"; };
+		268E48A821290149008241B8 /* MarketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketService.swift; sourceTree = "<group>"; };
+		268E48A921290149008241B8 /* MarketServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketServiceMock.swift; sourceTree = "<group>"; };
+		268E48AA21290149008241B8 /* ShoppingCartService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartService.swift; sourceTree = "<group>"; };
+		268E48B4212901CF008241B8 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductTableViewCell.swift; path = MarketLeftOver/Presentation/Cells/ProductTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		268E48B62129020C008241B8 /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		423993A82128AFC600EE0799 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		423993A92128AFC600EE0799 /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		423993AA2128AFC700EE0799 /* Poppins-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.otf"; sourceTree = "<group>"; };
@@ -74,6 +89,8 @@
 		423993C62128E02B00EE0799 /* ShoppingCartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartController.swift; sourceTree = "<group>"; };
 		423993C82128E92500EE0799 /* ShoppingCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
 		423993CA2128EDF300EE0799 /* CheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutController.swift; sourceTree = "<group>"; };
+		71176ED03CBCD6DA7FBFE7E3 /* Pods-MarketLeftOver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketLeftOver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver.debug.xcconfig"; sourceTree = "<group>"; };
+		BA486C7A2437D9FF601B94AA /* Pods_MarketLeftOver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketLeftOver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2479D8B9444B6D5340ED4542 /* BuildFile in Frameworks */,
+				2D7B9993585C75ECB74A5BA3 /* Pods_MarketLeftOver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +111,8 @@
 			children = (
 				268E4855212896AF008241B8 /* MarketLeftOver */,
 				268E4854212896AF008241B8 /* Products */,
+				F5DF8D77F27937DE30D18095 /* Pods */,
+				D5506105F9EFD1168E0A970F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +144,9 @@
 		268E4868212896EC008241B8 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				268E48A521290149008241B8 /* ServiceFactory.swift */,
+				268E48B821290264008241B8 /* ServiceImplementation */,
+				268E48B12129015F008241B8 /* ServiceImplementationMock */,
 				268E487821289E81008241B8 /* ServicesProtocols */,
 			);
 			path = Business;
@@ -131,10 +155,10 @@
 		268E486921289724008241B8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				268E48B3212901BF008241B8 /* Cells */,
 				423993AE2128B11500EE0799 /* View */,
 				268E486A21289730008241B8 /* ViewController */,
 				268E486B2128974B008241B8 /* Storyboard */,
-				268E486C21289756008241B8 /* Xibs */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -142,12 +166,11 @@
 		268E486A21289730008241B8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				268E48852128AA7E008241B8 /* Vc.swift */,
+				268E48B62129020C008241B8 /* ProductListViewController.swift */,
 				423993B62128BDC700EE0799 /* MarketDetailsController.swift */,
 				423993BE2128CBE800EE0799 /* MarketListController.swift */,
 				423993CA2128EDF300EE0799 /* CheckoutController.swift */,
 				423993C62128E02B00EE0799 /* ShoppingCartController.swift */,
-				423993B32128B32500EE0799 /* Cells */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -165,14 +188,6 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		268E486C21289756008241B8 /* Xibs */ = {
-			isa = PBXGroup;
-			children = (
-				268E48872128AAA3008241B8 /* MarketCollectionViewCell.xib */,
-			);
-			path = Xibs;
-			sourceTree = "<group>";
-		};
 		268E486D21289771008241B8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,10 +202,42 @@
 		268E487821289E81008241B8 /* ServicesProtocols */ = {
 			isa = PBXGroup;
 			children = (
+				268E48A621290149008241B8 /* ShoppingCartServiceProtocol.swift */,
 				268E48812128A753008241B8 /* MarketServiceProtocol.swift */,
 				268E48832128A93E008241B8 /* ProductServiceProtocol.swift */,
 			);
 			path = ServicesProtocols;
+			sourceTree = "<group>";
+		};
+		268E48B12129015F008241B8 /* ServiceImplementationMock */ = {
+			isa = PBXGroup;
+			children = (
+				268E48A921290149008241B8 /* MarketServiceMock.swift */,
+				268E48A721290149008241B8 /* ProductServiceMock.swift */,
+			);
+			path = ServiceImplementationMock;
+			sourceTree = "<group>";
+		};
+		268E48B3212901BF008241B8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				268E48B4212901CF008241B8 /* ProductTableViewCell.swift */,
+				423993BC2128C83C00EE0799 /* MarketDetailsTableCell.swift */,
+				423993C82128E92500EE0799 /* ShoppingCartCell.swift */,
+				423993C02128CCE600EE0799 /* MarketListCollectionCell.swift */,
+				423993BA2128C2BB00EE0799 /* MarketDetailsCollectionCell.swift */,
+			);
+			name = Cells;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		268E48B821290264008241B8 /* ServiceImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				268E48A821290149008241B8 /* MarketService.swift */,
+				268E48AA21290149008241B8 /* ShoppingCartService.swift */,
+			);
+			path = ServiceImplementation;
 			sourceTree = "<group>";
 		};
 		423993AE2128B11500EE0799 /* View */ = {
@@ -203,15 +250,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		423993B32128B32500EE0799 /* Cells */ = {
+		D5506105F9EFD1168E0A970F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				423993BC2128C83C00EE0799 /* MarketDetailsTableCell.swift */,
-				423993C82128E92500EE0799 /* ShoppingCartCell.swift */,
-				423993C02128CCE600EE0799 /* MarketListCollectionCell.swift */,
-				423993BA2128C2BB00EE0799 /* MarketDetailsCollectionCell.swift */,
+				BA486C7A2437D9FF601B94AA /* Pods_MarketLeftOver.framework */,
 			);
-			path = Cells;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5DF8D77F27937DE30D18095 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71176ED03CBCD6DA7FBFE7E3 /* Pods-MarketLeftOver.debug.xcconfig */,
+				1E3B49743379ACE8A01A9709 /* Pods-MarketLeftOver.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,9 +274,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 268E4865212896B3008241B8 /* Build configuration list for PBXNativeTarget "MarketLeftOver" */;
 			buildPhases = (
+				7B918A0442F3BB91A7BCFE24 /* [CP] Check Pods Manifest.lock */,
 				268E484F212896AF008241B8 /* Sources */,
 				268E4850212896AF008241B8 /* Frameworks */,
 				268E4851212896AF008241B8 /* Resources */,
+				7C93D7E41F8673CCD5EF0E0D /* [CP] Embed Pods Frameworks */,
+				F60816C0AAD510F44DE6F6DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,7 +331,6 @@
 				268E487721289E50008241B8 /* Checkout.storyboard in Resources */,
 				268E487321289A05008241B8 /* ProductList.storyboard in Resources */,
 				268E486F21289937008241B8 /* MarketList.storyboard in Resources */,
-				268E48882128AAA3008241B8 /* MarketCollectionViewCell.xib in Resources */,
 				423993AB2128AFC700EE0799 /* Poppins-Medium.otf in Resources */,
 				268E487521289B19008241B8 /* ShoppingCart.storyboard in Resources */,
 				268E4861212896B3008241B8 /* LaunchScreen.storyboard in Resources */,
@@ -289,6 +344,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B918A0442F3BB91A7BCFE24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarketLeftOver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C93D7E41F8673CCD5EF0E0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F60816C0AAD510F44DE6F6DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		268E484F212896AF008241B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -300,19 +409,26 @@
 				423993C72128E02B00EE0799 /* ShoppingCartController.swift in Sources */,
 				423993C32128DBCD00EE0799 /* GradientView.swift in Sources */,
 				423993B02128B12900EE0799 /* CardView.swift in Sources */,
+				268E48AD2129014A008241B8 /* ProductServiceMock.swift in Sources */,
 				268E4857212896AF008241B8 /* AppDelegate.swift in Sources */,
+				268E48AC2129014A008241B8 /* ShoppingCartServiceProtocol.swift in Sources */,
 				268E487A21289EAA008241B8 /* Market.swift in Sources */,
 				268E48842128A93E008241B8 /* ProductServiceProtocol.swift in Sources */,
+				268E48AE2129014A008241B8 /* MarketService.swift in Sources */,
+				268E48B5212901CF008241B8 /* ProductTableViewCell.swift in Sources */,
 				423993C52128DDCD00EE0799 /* CustomLabel.swift in Sources */,
-				268E48862128AA7E008241B8 /* Vc.swift in Sources */,
+				268E48B72129020C008241B8 /* ProductListViewController.swift in Sources */,
 				423993BF2128CBE800EE0799 /* MarketListController.swift in Sources */,
 				423993B72128BDC700EE0799 /* MarketDetailsController.swift in Sources */,
 				268E48822128A753008241B8 /* MarketServiceProtocol.swift in Sources */,
+				268E48AB2129014A008241B8 /* ServiceFactory.swift in Sources */,
 				423993BB2128C2BB00EE0799 /* MarketDetailsCollectionCell.swift in Sources */,
 				268E487C2128A0C0008241B8 /* Product.swift in Sources */,
 				423993CB2128EDF300EE0799 /* CheckoutController.swift in Sources */,
+				268E48AF2129014A008241B8 /* MarketServiceMock.swift in Sources */,
 				423993BD2128C83C00EE0799 /* MarketDetailsTableCell.swift in Sources */,
 				268E487E2128A355008241B8 /* Category.swift in Sources */,
+				268E48B02129014A008241B8 /* ShoppingCartService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,15 +570,13 @@
 		};
 		268E4866212896B3008241B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71176ED03CBCD6DA7FBFE7E3 /* Pods-MarketLeftOver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7W6V69HBWC;
+				DEVELOPMENT_TEAM = A62VCTXVB8;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.unicamp.alexandremestre.MarketLeftOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -472,15 +586,13 @@
 		};
 		268E4867212896B3008241B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E3B49743379ACE8A01A9709 /* Pods-MarketLeftOver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7W6V69HBWC;
+				DEVELOPMENT_TEAM = A62VCTXVB8;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.unicamp.alexandremestre.MarketLeftOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

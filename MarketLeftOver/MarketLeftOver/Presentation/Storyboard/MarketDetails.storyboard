@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="125.4872563718141"/>
         </scene>
-        <!--ShoppingCart-->
+        <!--ProductList-->
         <scene sceneID="hkk-yW-z1h">
             <objects>
-                <viewControllerPlaceholder storyboardName="ShoppingCart" id="nlh-zq-5Mo" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ProductList" id="nlh-zq-5Mo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrh-nM-3IK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="779" y="125"/>

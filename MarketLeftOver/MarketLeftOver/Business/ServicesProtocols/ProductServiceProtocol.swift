@@ -10,9 +10,28 @@ import Foundation
 
 protocol ProductServiceProtocol: class {
     
-    func product(withId id: String) -> Product?
-    func bestProducts(from market: Market) -> [Product]
-    func products(ofCategory category: Category) -> [Product]
-    func products(ofBrand brand: String) -> [Product]
+    /// Get the product with id provided
+    ///
+    /// - Parameter id: product's id
+    /// - Returns: Product's object, if exists
+    func product(withId id: String, completion: @escaping (Product?)->Void)
+    
+    /// Best products from a market (usually the one's with best price)
+    ///
+    /// - Parameter market:
+    /// - Returns: product list
+    func bestProducts(from market: Market, completion: @escaping ([Product]?)->Void)
+    
+    /// All products of a given category
+    ///
+    /// - Parameter category:
+    /// - Returns: list of products
+    func products(ofCategory category: Category, from market: Market, completion: @escaping ([Product]?)->Void)
+    
+    /// All products of a given brand
+    ///
+    /// - Parameter brand:
+    /// - Returns: product list
+    func products(ofBrand brand: String, completion: @escaping ([Product]?)->Void)
     
 }
