@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2479D8B9444B6D5340ED4542 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		265B49F8212917D500236FEE /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49F7212917D500236FEE /* ProductService.swift */; };
+		265B49FA2129240800236FEE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49F92129240800236FEE /* UIView.swift */; };
+		265B49FD2129243A00236FEE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49FC2129243A00236FEE /* UITableView.swift */; };
 		268E4857212896AF008241B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E4856212896AF008241B8 /* AppDelegate.swift */; };
 		268E485C212896AF008241B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268E485A212896AF008241B8 /* Main.storyboard */; };
 		268E485E212896B3008241B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268E485D212896B3008241B8 /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		1E3B49743379ACE8A01A9709 /* Pods-MarketLeftOver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketLeftOver.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver.release.xcconfig"; sourceTree = "<group>"; };
 		265B49F7212917D500236FEE /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		265B49F92129240800236FEE /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		265B49FC2129243A00236FEE /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		268E4853212896AF008241B8 /* MarketLeftOver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketLeftOver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		268E4856212896AF008241B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		268E485B212896AF008241B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		265B49FB2129242800236FEE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				265B49F92129240800236FEE /* UIView.swift */,
+				265B49FC2129243A00236FEE /* UITableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		268E484A212896AF008241B8 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +144,7 @@
 		268E4855212896AF008241B8 /* MarketLeftOver */ = {
 			isa = PBXGroup;
 			children = (
+				265B49FB2129242800236FEE /* Extensions */,
 				268E4868212896EC008241B8 /* Business */,
 				268E486921289724008241B8 /* Presentation */,
 				268E486D21289771008241B8 /* Model */,
@@ -413,6 +427,7 @@
 				423993C92128E92500EE0799 /* ShoppingCartCell.swift in Sources */,
 				423993C12128CCE600EE0799 /* MarketListCollectionCell.swift in Sources */,
 				423993C72128E02B00EE0799 /* ShoppingCartController.swift in Sources */,
+				265B49FA2129240800236FEE /* UIView.swift in Sources */,
 				423993C32128DBCD00EE0799 /* GradientView.swift in Sources */,
 				423993B02128B12900EE0799 /* CardView.swift in Sources */,
 				268E48AD2129014A008241B8 /* ProductServiceMock.swift in Sources */,
@@ -425,6 +440,7 @@
 				265B49F8212917D500236FEE /* ProductService.swift in Sources */,
 				423993C52128DDCD00EE0799 /* CustomLabel.swift in Sources */,
 				268E48B72129020C008241B8 /* ProductListViewController.swift in Sources */,
+				265B49FD2129243A00236FEE /* UITableView.swift in Sources */,
 				423993BF2128CBE800EE0799 /* MarketListController.swift in Sources */,
 				423993B72128BDC700EE0799 /* MarketDetailsController.swift in Sources */,
 				268E48822128A753008241B8 /* MarketServiceProtocol.swift in Sources */,

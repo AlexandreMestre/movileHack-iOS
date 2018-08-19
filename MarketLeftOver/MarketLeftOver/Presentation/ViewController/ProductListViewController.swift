@@ -32,6 +32,8 @@ class ProductListViewController: UIViewController {
         setupNavigationBar()
         setupSearchController()
         
+        self.productListTableView.addTopBackgound(color: #colorLiteral(red: 0.9960784314, green: 0.8705882353, blue: 0.4588235294, alpha: 1))
+        
         if let category = self.category, let market = self.market {
             productService.products(ofCategory: category, from: market) { (products) in
                 if let products = products {
@@ -59,7 +61,9 @@ class ProductListViewController: UIViewController {
         definesPresentationContext = true
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Buscar produtos"
-        searchController.searchBar.barTintColor = #colorLiteral(red: 0.9960784314, green: 0.8705882353, blue: 0.4588235294, alpha: 1)
+        searchController.searchBar.barTintColor = #colorLiteral(red: 0.9960784314, green: 0.8431372549, blue: 0.337254902, alpha: 1)
+        searchController.searchBar.tintColor = #colorLiteral(red: 0.3333333333, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
+        searchController.searchBar.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.8431372549, blue: 0.337254902, alpha: 1)
     }
     
     @objc func cartButtonTouched() {

@@ -11,7 +11,6 @@ import UIKit
 @IBDesignable
 class CardView: UIView {
 
-    @IBInspectable var cornerRadius: CGFloat = 6
 
     @IBInspectable var shadowOffsetWidth: Int = 0
     @IBInspectable var shadowOffsetHeight: Int = 3
@@ -19,7 +18,7 @@ class CardView: UIView {
     @IBInspectable var shadowOpacity: Float = 0.5
 
     override func layoutSubviews() {
-        layer.cornerRadius = cornerRadius
+        //layer.cornerRadius = cornerRadius
         let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
 
         layer.masksToBounds = false
