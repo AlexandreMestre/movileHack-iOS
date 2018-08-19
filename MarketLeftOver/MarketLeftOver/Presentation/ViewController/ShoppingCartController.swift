@@ -12,8 +12,9 @@ class ShoppingCartController: UIViewController {
     @IBOutlet weak var totalValueLabel: UILabel!
     @IBOutlet weak var orderValueLabel: UILabel!
 
-    var tableViewCellHeight = 66
+    var tableViewCellHeight = 66.0
     var tableViewHeaderHeight = 45.0
+    var cartCellID = "shoppingCartCell"
 
     @IBOutlet weak var finishOrderButton: UIButton!
 
@@ -39,7 +40,7 @@ extension ShoppingCartController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCartCell", for: indexPath) as? ShoppingCartCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cartCellID, for: indexPath) as? ShoppingCartCell {
             cell.productNameLabel.text = "Produto \(indexPath.row)"
             return cell
         }

@@ -56,6 +56,7 @@ class ProductListViewController: UIViewController {
     }
     
     func setupSearchController() {
+    
         self.productListTableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
         definesPresentationContext = true

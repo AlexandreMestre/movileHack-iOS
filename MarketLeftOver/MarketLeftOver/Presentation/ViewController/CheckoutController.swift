@@ -26,10 +26,14 @@ class CheckoutController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
 
     
+    @IBAction func pressed(_ sender: Any) {
+        performSegue(withIdentifier: "modalShowUp", sender: nil)
+    }
 
 }

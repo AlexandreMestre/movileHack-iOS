@@ -23,25 +23,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kms-mW-sjD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background image" translatesAutoresizingMaskIntoConstraints="NO" id="kms-mW-sjD">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yz6-t8-k5Y">
-                                <rect key="frame" x="151" y="66" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha onde deseja comprar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ1-LC-WIG">
-                                <rect key="frame" x="59" y="66" width="257" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De onde deseja comprar?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ1-LC-WIG">
+                                <rect key="frame" x="59" y="56" width="257" height="24"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Mz-IP-ija">
-                                <rect key="frame" x="0.0" y="130" width="375" height="537"/>
-                                <color key="backgroundColor" red="0.99607843139999996" green="0.84313725490000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="7" id="h8V-ue-icG">
                                     <size key="itemSize" width="167" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -88,7 +81,7 @@
                             <constraint firstItem="oGU-52-DP4" firstAttribute="trailing" secondItem="2Mz-IP-ija" secondAttribute="trailing" id="EQ7-rR-Qv9"/>
                             <constraint firstItem="kms-mW-sjD" firstAttribute="leading" secondItem="oGU-52-DP4" secondAttribute="leading" id="Kg9-Vg-jaR"/>
                             <constraint firstItem="kms-mW-sjD" firstAttribute="top" secondItem="oGU-52-DP4" secondAttribute="top" id="Pw7-l6-u07"/>
-                            <constraint firstItem="kms-mW-sjD" firstAttribute="top" secondItem="PJ1-LC-WIG" secondAttribute="bottom" constant="-70" id="ZZQ-sc-XOz"/>
+                            <constraint firstItem="kms-mW-sjD" firstAttribute="top" secondItem="PJ1-LC-WIG" secondAttribute="bottom" constant="-60" id="ZZQ-sc-XOz"/>
                             <constraint firstItem="oGU-52-DP4" firstAttribute="bottom" secondItem="2Mz-IP-ija" secondAttribute="bottom" id="ZqE-kL-WSP"/>
                             <constraint firstItem="PJ1-LC-WIG" firstAttribute="leading" secondItem="oGU-52-DP4" secondAttribute="leading" constant="59" id="ax8-mi-9Qm"/>
                             <constraint firstItem="2Mz-IP-ija" firstAttribute="top" secondItem="PJ1-LC-WIG" secondAttribute="bottom" constant="40" id="oVi-Wa-w9c"/>
@@ -115,6 +108,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="912" height="1622"/>
+        <image name="background image" width="912" height="1622"/>
     </resources>
 </document>

@@ -9,6 +9,19 @@
 import UIKit
 
 class MarketDetailsCollectionCell: UICollectionViewCell {
-    
+    @IBOutlet weak var bestDealImage: UIImageView!
+    @IBOutlet weak var bestDealNameLabel: UILabel!
+    @IBOutlet weak var bestDealDueDateLabel: UILabel!
+    @IBOutlet weak var bestDealPriceLabel: UILabel!
+    @IBOutlet weak var bestDealButton: UIButton!
+
+    override func awakeFromNib() {
+        bestDealButton.layer.cornerRadius = 10
+    }
+
+    @IBAction func bestDealPressed(_ sender: Any) {
+        print("Best Deal Pressed")
+    }
+
 }
 
