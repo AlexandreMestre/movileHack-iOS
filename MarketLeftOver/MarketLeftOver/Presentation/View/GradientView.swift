@@ -4,29 +4,56 @@
 //
 //  Created by Larissa Ganaha on 18/08/18.
 //  Copyright © 2018 Alexandre Conti Mestre. All rights reserved.
-//
-//
-//  Gradient.swift
-//  GreenSteps
-//
-//  Created by Larissa Ganaha on 03/08/18.
-//  Copyright © 2018 Larissa Ganaha. All rights reserved.
-//
 
 import UIKit
 
 @IBDesignable
 class GradientView: UIView {
-    @IBInspectable var startColor: UIColor = .black { didSet { updateColors() }}
-    @IBInspectable var endColor: UIColor = .white { didSet { updateColors() }}
-    @IBInspectable var startLocation: Double = 0.05 { didSet { updateLocations() }}
-    @IBInspectable var endLocation: Double = 0.95 { didSet { updateLocations() }}
-    @IBInspectable var horizontalMode: Bool = false { didSet { updatePoints() }}
-    @IBInspectable var diagonalMode: Bool = false { didSet { updatePoints() }}
+    @IBInspectable var startColor: UIColor = .black {
+        didSet {
+            updateColors()
+        }
+    }
 
-    override class var layerClass: AnyClass { return CAGradientLayer.self }
+    @IBInspectable var endColor: UIColor = .white {
+        didSet {
+            updateColors()
+        }
+    }
 
-    var gradientLayer: CAGradientLayer { return layer as! CAGradientLayer }
+    @IBInspectable var startLocation: Double = 0.05 {
+        didSet {
+            updateLocations()
+        }
+    }
+
+    @IBInspectable var endLocation: Double = 0.95 {
+        didSet {
+            updateLocations()
+
+        }
+    }
+
+    @IBInspectable var horizontalMode: Bool = false {
+        didSet {
+            updatePoints()
+        }
+    }
+
+    @IBInspectable var diagonalMode: Bool = false {
+        didSet {
+            updatePoints()
+
+        }
+    }
+
+    override class var layerClass: AnyClass {
+        return CAGradientLayer.self
+    }
+
+    var gradientLayer: CAGradientLayer {
+        return layer as! CAGradientLayer
+    }
 
     func updatePoints() {
         if horizontalMode {

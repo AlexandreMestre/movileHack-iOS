@@ -27,6 +27,5 @@ class MarketDetailsCollectionCell: UICollectionViewCell {
             delegate?.addButtonTouched(onCellWith: index)
         }
     }
-
 }
 

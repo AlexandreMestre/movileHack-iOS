@@ -31,27 +31,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-xe-nh4">
-                                        <rect key="frame" x="162" y="230" width="51" height="51"/>
+                                        <rect key="frame" x="162" y="235.5" width="51" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="YR3-y7-L7h"/>
                                             <constraint firstAttribute="width" secondItem="gaV-xe-nh4" secondAttribute="height" multiplier="1:1" id="cGg-2Q-bUw"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obrigado!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVD-1u-Wtd">
-                                        <rect key="frame" x="143" y="289" width="88" height="24"/>
+                                        <rect key="frame" x="143" y="294.5" width="88" height="24"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seus produtos serão entregues em breve!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4px-IB-71i">
-                                        <rect key="frame" x="80" y="315" width="215" height="42"/>
+                                        <rect key="frame" x="80" y="320.5" width="215" height="42"/>
                                         <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ContraODesperdício" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtW-5L-Unc">
-                                        <rect key="frame" x="132" y="365" width="110" height="14"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="10"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ContraODesperdício" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtW-5L-Unc">
+                                        <rect key="frame" x="110" y="370.5" width="155" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -75,11 +75,11 @@
                                     <constraint firstItem="gaV-xe-nh4" firstAttribute="leading" secondItem="uQD-A6-Nep" secondAttribute="leading" constant="162" id="2hu-jw-Bei"/>
                                     <constraint firstItem="yVD-1u-Wtd" firstAttribute="leading" secondItem="uQD-A6-Nep" secondAttribute="leading" constant="143" id="2zf-kp-4hY"/>
                                     <constraint firstItem="KtW-5L-Unc" firstAttribute="top" secondItem="4px-IB-71i" secondAttribute="bottom" constant="8" id="7oe-jw-IPL"/>
-                                    <constraint firstItem="bj2-PB-bH8" firstAttribute="top" secondItem="KtW-5L-Unc" secondAttribute="bottom" constant="40" id="CRD-mO-2kZ"/>
+                                    <constraint firstItem="bj2-PB-bH8" firstAttribute="top" secondItem="KtW-5L-Unc" secondAttribute="bottom" constant="30" id="CRD-mO-2kZ"/>
                                     <constraint firstItem="bj2-PB-bH8" firstAttribute="centerX" secondItem="uQD-A6-Nep" secondAttribute="centerX" id="GB6-Ap-g73"/>
                                     <constraint firstItem="gaV-xe-nh4" firstAttribute="centerX" secondItem="uQD-A6-Nep" secondAttribute="centerX" id="HXM-Ey-l2x"/>
                                     <constraint firstItem="4px-IB-71i" firstAttribute="leading" secondItem="uQD-A6-Nep" secondAttribute="leading" constant="80" id="KEk-Gc-lnd"/>
-                                    <constraint firstItem="KtW-5L-Unc" firstAttribute="leading" secondItem="uQD-A6-Nep" secondAttribute="leading" constant="132" id="LfW-u2-hL0"/>
+                                    <constraint firstItem="KtW-5L-Unc" firstAttribute="leading" secondItem="uQD-A6-Nep" secondAttribute="leading" constant="110" id="LfW-u2-hL0"/>
                                     <constraint firstItem="bj2-PB-bH8" firstAttribute="leading" secondItem="uQD-A6-Nep" secondAttribute="leading" constant="105" id="WwV-y7-Qmh"/>
                                     <constraint firstAttribute="trailing" secondItem="yVD-1u-Wtd" secondAttribute="trailing" constant="144" id="Zl4-ZI-VJp"/>
                                     <constraint firstAttribute="trailing" secondItem="4px-IB-71i" secondAttribute="trailing" constant="80" id="bPN-X1-iJB"/>
@@ -87,7 +87,7 @@
                                     <constraint firstAttribute="trailing" secondItem="gaV-xe-nh4" secondAttribute="trailing" constant="162" id="dRO-Ii-AZw"/>
                                     <constraint firstItem="4px-IB-71i" firstAttribute="top" secondItem="yVD-1u-Wtd" secondAttribute="bottom" constant="2" id="g1h-5d-CB7"/>
                                     <constraint firstAttribute="bottom" secondItem="bj2-PB-bH8" secondAttribute="bottom" constant="208" id="guW-pd-w7t"/>
-                                    <constraint firstAttribute="trailing" secondItem="KtW-5L-Unc" secondAttribute="trailing" constant="133" id="hva-2a-hyI"/>
+                                    <constraint firstAttribute="trailing" secondItem="KtW-5L-Unc" secondAttribute="trailing" constant="110" id="hva-2a-hyI"/>
                                     <constraint firstItem="yVD-1u-Wtd" firstAttribute="top" secondItem="gaV-xe-nh4" secondAttribute="bottom" constant="8" id="s3B-H0-To4"/>
                                     <constraint firstAttribute="trailing" secondItem="bj2-PB-bH8" secondAttribute="trailing" constant="105" id="x00-zQ-wu8"/>
                                 </constraints>

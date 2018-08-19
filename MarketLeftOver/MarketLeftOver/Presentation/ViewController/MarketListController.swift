@@ -31,8 +31,8 @@ class MarketListController: UIViewController {
         setUpNavBar()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewWillAppear(_ animated: Bool) {
+        setupNavBarFont()
     }
 
     func setUpNavBar() {
@@ -40,6 +40,16 @@ class MarketListController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationItem.title = "XEPA!"
+
+        setupNavBarFont()
+
+    }
+
+    func setupNavBarFont() {
+        if let font = UIFont(name: "ComicPanels", size: 25) {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: font]
+        }
     }
 
     @IBAction func unwindToMarketList(segue:UIStoryboardSegue) { }
@@ -77,6 +87,4 @@ extension MarketListController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showMarketDetails", sender: self.markets[indexPath.row])
     }
-
-    
 }

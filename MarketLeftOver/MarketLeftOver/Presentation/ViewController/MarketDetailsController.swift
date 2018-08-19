@@ -56,7 +56,6 @@ class MarketDetailsController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,6 +70,9 @@ class MarketDetailsController: UIViewController {
     
     func setupNavigationBar(_ market: Market) {
         navigationTitle = market.name
+        if let font = UIFont(name: "Poppins-Semibold", size: 17) {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: font]
+        }
         let cartButton = UIBarButtonItem(image: #imageLiteral(resourceName: "cart"), style: .plain, target: self, action: #selector(self.cartButtonTouched))
         cartButton.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.navigationItem.rightBarButtonItem = cartButton

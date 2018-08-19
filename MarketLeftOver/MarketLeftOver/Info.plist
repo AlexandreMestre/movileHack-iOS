@@ -28,6 +28,8 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>ComicPanels.ttf</string>
+		<string>Comic-Panels.otf</string>
 		<string>Poppins-SemiBold.otf</string>
 		<string>Poppins-Light.otf</string>
 		<string>Poppins-Medium.otf</string>

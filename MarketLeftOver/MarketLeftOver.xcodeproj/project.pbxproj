@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2479D8B9444B6D5340ED4542 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		2479D8B9444B6D5340ED4542 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		265B49F8212917D500236FEE /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49F7212917D500236FEE /* ProductService.swift */; };
 		265B49FA2129240800236FEE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49F92129240800236FEE /* UIView.swift */; };
 		265B49FD2129243A00236FEE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49FC2129243A00236FEE /* UITableView.swift */; };
 		268E4857212896AF008241B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E4856212896AF008241B8 /* AppDelegate.swift */; };
 		268E485C212896AF008241B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268E485A212896AF008241B8 /* Main.storyboard */; };
 		268E485E212896B3008241B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268E485D212896B3008241B8 /* Assets.xcassets */; };
-		268E4861212896B3008241B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268E485F212896B3008241B8 /* LaunchScreen.storyboard */; };
 		268E486F21289937008241B8 /* MarketList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268E486E21289937008241B8 /* MarketList.storyboard */; };
 		268E4871212899E8008241B8 /* MarketDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268E4870212899E8008241B8 /* MarketDetails.storyboard */; };
 		268E487321289A05008241B8 /* ProductList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268E487221289A05008241B8 /* ProductList.storyboard */; };
@@ -52,6 +51,9 @@
 		423993CB2128EDF300EE0799 /* CheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423993CA2128EDF300EE0799 /* CheckoutController.swift */; };
 		42EA03B8212916460022C5E8 /* FinishedModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EA03B7212916460022C5E8 /* FinishedModal.storyboard */; };
 		42EA03BA212918530022C5E8 /* FinishedModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EA03B9212918530022C5E8 /* FinishedModalController.swift */; };
+		42EA03BC21292F3C0022C5E8 /* Comic-Panels.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42EA03BB21292F3C0022C5E8 /* Comic-Panels.otf */; };
+		42EA03C0212936160022C5E8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EA03BF212936160022C5E8 /* Launch Screen.storyboard */; };
+		42EA03C2212936950022C5E8 /* ComicPanels.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42EA03C1212936950022C5E8 /* ComicPanels.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +65,6 @@
 		268E4856212896AF008241B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		268E485B212896AF008241B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		268E485D212896B3008241B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		268E4860212896B3008241B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		268E4862212896B3008241B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		268E486E21289937008241B8 /* MarketList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarketList.storyboard; sourceTree = "<group>"; };
 		268E4870212899E8008241B8 /* MarketDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarketDetails.storyboard; sourceTree = "<group>"; };
@@ -101,6 +102,9 @@
 		423993CA2128EDF300EE0799 /* CheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutController.swift; sourceTree = "<group>"; };
 		42EA03B7212916460022C5E8 /* FinishedModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinishedModal.storyboard; sourceTree = "<group>"; };
 		42EA03B9212918530022C5E8 /* FinishedModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedModalController.swift; sourceTree = "<group>"; };
+		42EA03BB21292F3C0022C5E8 /* Comic-Panels.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comic-Panels.otf"; sourceTree = "<group>"; };
+		42EA03BF212936160022C5E8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		42EA03C1212936950022C5E8 /* ComicPanels.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ComicPanels.ttf; sourceTree = "<group>"; };
 		71176ED03CBCD6DA7FBFE7E3 /* Pods-MarketLeftOver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketLeftOver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver.debug.xcconfig"; sourceTree = "<group>"; };
 		BA486C7A2437D9FF601B94AA /* Pods_MarketLeftOver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketLeftOver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2479D8B9444B6D5340ED4542 /* (null) in Frameworks */,
+				2479D8B9444B6D5340ED4542 /* BuildFile in Frameworks */,
 				2D7B9993585C75ECB74A5BA3 /* Pods_MarketLeftOver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +134,7 @@
 		268E484A212896AF008241B8 = {
 			isa = PBXGroup;
 			children = (
+				42EA03BF212936160022C5E8 /* Launch Screen.storyboard */,
 				268E4855212896AF008241B8 /* MarketLeftOver */,
 				268E4854212896AF008241B8 /* Products */,
 				F5DF8D77F27937DE30D18095 /* Pods */,
@@ -153,11 +158,8 @@
 				268E486921289724008241B8 /* Presentation */,
 				268E486D21289771008241B8 /* Model */,
 				268E4856212896AF008241B8 /* AppDelegate.swift */,
-				423993AA2128AFC700EE0799 /* Poppins-Light.otf */,
-				423993A82128AFC600EE0799 /* Poppins-Medium.otf */,
-				423993A92128AFC600EE0799 /* Poppins-SemiBold.otf */,
+				42EA03BD21292F6D0022C5E8 /* Fonts */,
 				268E485D212896B3008241B8 /* Assets.xcassets */,
-				268E485F212896B3008241B8 /* LaunchScreen.storyboard */,
 				268E4862212896B3008241B8 /* Info.plist */,
 			);
 			path = MarketLeftOver;
@@ -276,6 +278,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		42EA03BD21292F6D0022C5E8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				42EA03BB21292F3C0022C5E8 /* Comic-Panels.otf */,
+				42EA03C1212936950022C5E8 /* ComicPanels.ttf */,
+				423993AA2128AFC700EE0799 /* Poppins-Light.otf */,
+				423993A82128AFC600EE0799 /* Poppins-Medium.otf */,
+				423993A92128AFC600EE0799 /* Poppins-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		D5506105F9EFD1168E0A970F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,7 +319,7 @@
 				268E4850212896AF008241B8 /* Frameworks */,
 				268E4851212896AF008241B8 /* Resources */,
 				7C93D7E41F8673CCD5EF0E0D /* [CP] Embed Pods Frameworks */,
-				AAA4ABA1DA98501411A468F7 /* [CP] Copy Pods Resources */,
+				AFD2173D9BFF42FB1F0CE720 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,14 +372,16 @@
 				268E487321289A05008241B8 /* ProductList.storyboard in Resources */,
 				268E486F21289937008241B8 /* MarketList.storyboard in Resources */,
 				423993AB2128AFC700EE0799 /* Poppins-Medium.otf in Resources */,
+				42EA03C0212936160022C5E8 /* Launch Screen.storyboard in Resources */,
 				268E487521289B19008241B8 /* ShoppingCart.storyboard in Resources */,
-				268E4861212896B3008241B8 /* LaunchScreen.storyboard in Resources */,
 				423993AC2128AFC700EE0799 /* Poppins-SemiBold.otf in Resources */,
 				268E485E212896B3008241B8 /* Assets.xcassets in Resources */,
 				268E485C212896AF008241B8 /* Main.storyboard in Resources */,
 				423993AD2128AFC700EE0799 /* Poppins-Light.otf in Resources */,
+				42EA03BC21292F3C0022C5E8 /* Comic-Panels.otf in Resources */,
 				42EA03B8212916460022C5E8 /* FinishedModal.storyboard in Resources */,
 				268E4871212899E8008241B8 /* MarketDetails.storyboard in Resources */,
+				42EA03C2212936950022C5E8 /* ComicPanels.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +426,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AAA4ABA1DA98501411A468F7 /* [CP] Copy Pods Resources */ = {
+		AFD2173D9BFF42FB1F0CE720 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -475,14 +491,6 @@
 				268E485B212896AF008241B8 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		268E485F212896B3008241B8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				268E4860212896B3008241B8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -610,10 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62VCTXVB8;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.unicamp.alexandremestre.MarketLeftOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -629,10 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62VCTXVB8;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.unicamp.alexandremestre.MarketLeftOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
