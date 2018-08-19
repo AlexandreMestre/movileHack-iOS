@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MarketDetailsController: UIViewController {
 
@@ -79,13 +80,7 @@ extension MarketDetailsController: UITableViewDelegate, UITableViewDataSource{
             cell.categoryNameLabel.text = category.name
             
             if let imageURL = category.iconURL {
-                // TODO: - load image using kingFisher
-                do {
-                    let data = try Data(contentsOf: imageURL)
-                    cell.categoryIconImage.image = UIImage(data: data)
-                } catch {
-                    
-                }
+                cell.categoryIconImage.kf.setImage(with: imageURL)
             }
             
             return cell
@@ -135,12 +130,7 @@ extension MarketDetailsController: UICollectionViewDataSource, UICollectionViewD
             cell.bestDealNameLabel.text = product.name
             
             if let imageURL = product.imageURL {
-                // TODO: - load image using kingFisher
-                do {
-                    let data = try Data(contentsOf: imageURL)
-                    cell.bestDealImage.image = UIImage(data: data)
-                } catch {
-                }
+                cell.bestDealImage.kf.setImage(with: imageURL)
             }
             
             let dateFormatter = DateFormatter()

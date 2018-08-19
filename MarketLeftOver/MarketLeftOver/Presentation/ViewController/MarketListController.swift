@@ -66,13 +66,7 @@ extension MarketListController: UICollectionViewDataSource, UICollectionViewDele
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: listCellID, for: indexPath) as? MarketListCollectionCell {
             
             if let imageURL = market.logoImageURL {
-                // TODO: - load image using kingFisher
-                do {
-                    let data = try Data(contentsOf: imageURL)
-                    cell.marketLogo.image = UIImage(data: data)
-                } catch {
-                    
-                }
+                cell.marketLogo.kf.setImage(with: imageURL)
             }
             
             return cell

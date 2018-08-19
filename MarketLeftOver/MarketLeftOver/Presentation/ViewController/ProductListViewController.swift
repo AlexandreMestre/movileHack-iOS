@@ -98,13 +98,7 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
             
             productCell.productName.text = product.name
             if let imageURL = product.imageURL {
-                // TODO: - load image using kingFisher
-                do {
-                    let data = try Data(contentsOf: imageURL)
-                    productCell.productImage.image = UIImage(data: data)
-                } catch {
-                    
-                }
+                productCell.productImage.kf.setImage(with: imageURL)
             }
             
             let dateFormatter = DateFormatter()
