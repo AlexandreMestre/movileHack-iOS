@@ -38,7 +38,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" id="A4g-cy-20v" customClass="ProductTableViewCell" customModule="MarketLeftOver" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="productCell" id="A4g-cy-20v" customClass="ProductTableViewCell" customModule="MarketLeftOver" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A4g-cy-20v" id="HQZ-Xl-Tju">
@@ -124,18 +124,39 @@
                                     <outlet property="delegate" destination="hNP-3d-tbM" id="9Mf-9r-WZt"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4R-Kh-yui">
+                                <rect key="frame" x="-0.5" y="667" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item adicionado ao carrinho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKY-6B-OAz">
+                                        <rect key="frame" x="79" y="19" width="218" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.69411764705882351" green="0.8901960784313725" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ANE-di-eZ9"/>
+                                    <constraint firstItem="HKY-6B-OAz" firstAttribute="centerY" secondItem="f4R-Kh-yui" secondAttribute="centerY" id="UYm-L2-fK0"/>
+                                    <constraint firstItem="HKY-6B-OAz" firstAttribute="centerX" secondItem="f4R-Kh-yui" secondAttribute="centerX" id="opP-jL-t7n"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="USc-bd-fs7"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="f4R-Kh-yui" firstAttribute="centerX" secondItem="vW2-FH-uN1" secondAttribute="centerX" id="4ol-4J-D0d"/>
+                            <constraint firstItem="f4R-Kh-yui" firstAttribute="width" secondItem="vW2-FH-uN1" secondAttribute="width" id="DY0-mq-LPW"/>
                             <constraint firstItem="4lC-2y-eS3" firstAttribute="trailing" secondItem="UGQ-oR-T3h" secondAttribute="trailing" id="Jgn-Ql-ymT"/>
                             <constraint firstItem="UGQ-oR-T3h" firstAttribute="top" secondItem="4lC-2y-eS3" secondAttribute="top" id="Jtx-qp-bm6"/>
                             <constraint firstItem="4lC-2y-eS3" firstAttribute="bottom" secondItem="UGQ-oR-T3h" secondAttribute="bottom" id="L5L-Ek-AMd"/>
+                            <constraint firstItem="UGQ-oR-T3h" firstAttribute="bottom" secondItem="f4R-Kh-yui" secondAttribute="top" id="tnw-8D-RPO"/>
                             <constraint firstItem="UGQ-oR-T3h" firstAttribute="leading" secondItem="4lC-2y-eS3" secondAttribute="leading" id="xwb-Zn-O5R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4lC-2y-eS3"/>
                     </view>
                     <navigationItem key="navigationItem" id="kh0-rL-qMt"/>
                     <connections>
+                        <outlet property="itemAddViewTopConstraint" destination="tnw-8D-RPO" id="hIo-q8-wDD"/>
                         <outlet property="productListTableView" destination="UGQ-oR-T3h" id="BJE-32-fyX"/>
                         <segue destination="Gne-wb-0Q6" kind="show" identifier="shoppingCart" id="1wk-fs-l3R"/>
                     </connections>

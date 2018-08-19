@@ -14,8 +14,10 @@ class CheckoutController: UIViewController {
 
     var navigationTitle = "Pagamento"
 
+    @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = navigationTitle
         finishButton.layer.cornerRadius = 20
 
@@ -24,7 +26,6 @@ class CheckoutController: UIViewController {
         view.addGestureRecognizer(dismissTap)
     }
 
-
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -32,5 +33,6 @@ class CheckoutController: UIViewController {
     @IBAction func pressed(_ sender: Any) {
         performSegue(withIdentifier: "modalShowUp", sender: nil)
     }
+    
 
 }

@@ -9,18 +9,25 @@
 import UIKit
 
 class ShoppingCartController: UIViewController {
-    @IBOutlet weak var totalValueLabel: UILabel!
+   
     @IBOutlet weak var orderValueLabel: UILabel!
-
+    @IBOutlet weak var finishOrderButton: UIButton!
+    @IBOutlet weak var itensInCartTableView: UITableView!
+    
     var tableViewCellHeight = 66.0
     var tableViewHeaderHeight = 45.0
     var cartCellID = "shoppingCartCell"
     var navigationTitle = "Pedido"
 
-    @IBOutlet weak var finishOrderButton: UIButton!
-
+    let cartService = ServiceFactory.shoppingCartService()
+    var shoppingCart: ShoppingCart?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.shoppingCart = cartService.shoppingCart()
+        self.orderValueLabel.text = String(format: "R$%.02f", shoppingCart?.totalPrice ?? 0.00)
+        self.itensInCartTableView.reloadData()
 
         finishOrderButton.layer.cornerRadius = 20
         navigationItem.title = navigationTitle
@@ -37,12 +44,17 @@ class ShoppingCartController: UIViewController {
 
 extension ShoppingCartController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.shoppingCart?.itens.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: cartCellID, for: indexPath) as? ShoppingCartCell {
-            cell.productNameLabel.text = "Produto \(indexPath.row)"
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cartCellID, for: indexPath) as? ShoppingCartCell,
+           let cartItem = shoppingCart?.itens[indexPath.row] {
+                
+            cell.productNameLabel.text = "\(cartItem.product.name)"
+            cell.priceLabel.text = String(format: "R$%.02f", cartItem.product.currentPrice * Double(cartItem.quantity))
+            cell.quantityLabel.text = "x\(cartItem.quantity)"
+            
             return cell
         }
         return ShoppingCartCell()

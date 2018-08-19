@@ -7,5 +7,6 @@ target 'MarketLeftOver' do
 
   # Pods for MarketLeftOver
   pod 'Alamofire', '~> 4.7'
+  pod 'Kingfisher', '~> 4.0'
 
 end

@@ -10,12 +10,24 @@ import UIKit
 
 class MarketListController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var marketsCollectionView: UICollectionView!
+    
+    let marketService = ServiceFactory.marketService()
+    
+    var markets = [Market]()
 
-    var listCellID = "marketListCell"
+    let listCellID = "marketListCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        marketService.allMarkets { (markets) in
+            if let markets = markets {
+                self.markets = markets
+                self.marketsCollectionView.reloadData()
+            }
+        }
+        
         setUpNavBar()
     }
 
@@ -43,25 +55,38 @@ class MarketListController: UIViewController {
     }
 
     @IBAction func unwindToMarketList(segue:UIStoryboardSegue) { }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMarketDetails" {
+            if let destination = segue.destination as? MarketDetailsController,
+                let market = sender as? Market {
+                destination.market = market
+            }
+        }
+    }
 
 }
 
 extension MarketListController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.markets.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: listCellID,
-                                                         for: indexPath) as? MarketListCollectionCell {
+        let market = self.markets[indexPath.row]
+        
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: listCellID, for: indexPath) as? MarketListCollectionCell {
+            
+            if let imageURL = market.logoImageURL {
+                cell.marketLogo.kf.setImage(with: imageURL)
+            }
+            
             return cell
         }
         return MarketListCollectionCell()
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
-        performSegue(withIdentifier: "showMarketDetails", sender: nil)
+        performSegue(withIdentifier: "showMarketDetails", sender: self.markets[indexPath.row])
     }
 }
