@@ -29,7 +29,7 @@ class ProductServiceMock: ProductServiceProtocol {
         return [Product]()
     }
     
-    func products(ofCategory category: Category) -> [Product] {
+    func products(ofCategory category: Category, from market: Market) -> [Product] {
         if let product = self.product(withId: "zzzz") {
             return [product, product, product]
         }
