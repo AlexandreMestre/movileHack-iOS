@@ -10,12 +10,15 @@ import Foundation
 import CoreLocation
 
 protocol MarketServiceProtocol: class {
+    
+    func allMarkets(completion: @escaping ([Market]?)->Void)
 
     /// Get the market with id provided
     ///
-    /// - Parameter id: market id
-    /// - Returns: Market object if exists
-    func market(withId id: String, completion: @escaping (Market?)->Void)
+    /// - Parameters:
+    ///   - id: market id
+    ///   - completion: Market object if exists
+    func market(withId id: Int, completion: @escaping (Market?)->Void)
     
     /// Get markets near a location
     ///

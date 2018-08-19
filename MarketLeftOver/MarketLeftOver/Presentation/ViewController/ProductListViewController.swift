@@ -104,13 +104,16 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
             
             let dateFormatter = DateFormatter()
             dateFormatter.setLocalizedDateFormatFromTemplate("dd/MM/yyyy")
-            productCell.productDueDate.text = "Validade: \(dateFormatter.string(from: product.dueDate))"
-            
-            let originalPriceText: NSMutableAttributedString =  NSMutableAttributedString(string: "R$ \(product.originalPrice)")
+            if let date = product.dueDate {
+                productCell.productDueDate.text = "Validade: \(dateFormatter.string(from: date))"
+            } else {
+                productCell.productDueDate.text = "Validade: ----"
+            }
+            let originalPriceText: NSMutableAttributedString =  NSMutableAttributedString(string: String(format: "R$%.02f", product.originalPrice))
             originalPriceText.addAttribute(.strikethroughStyle, value: 1, range: NSMakeRange(0, originalPriceText.length))
             
             productCell.productNormalPrice.attributedText = originalPriceText
-            productCell.productCurrentPrice.text = "R$ \(product.currentPrice)"
+            productCell.productCurrentPrice.text = String(format: "R$%.02f", product.currentPrice)
             
             return productCell
         }
@@ -152,7 +155,7 @@ extension ProductListViewController: UISearchResultsUpdating {
             var productName = product.name.lowercased()
             productName = productName.folding(options: .diacriticInsensitive, locale: .current)
             
-            var brand = product.brand.lowercased()
+            var brand = product.brand?.lowercased() ?? ""
             brand = brand.folding(options: .diacriticInsensitive, locale: .current)
             
             if productName.contains(searchText) || brand.contains(searchText) {

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2479D8B9444B6D5340ED4542 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		2479D8B9444B6D5340ED4542 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		265B49F8212917D500236FEE /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49F7212917D500236FEE /* ProductService.swift */; };
 		268E4857212896AF008241B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E4856212896AF008241B8 /* AppDelegate.swift */; };
 		268E485C212896AF008241B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268E485A212896AF008241B8 /* Main.storyboard */; };
 		268E485E212896B3008241B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268E485D212896B3008241B8 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		268E48B02129014A008241B8 /* ShoppingCartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48AA21290149008241B8 /* ShoppingCartService.swift */; };
 		268E48B5212901CF008241B8 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48B4212901CF008241B8 /* ProductTableViewCell.swift */; };
 		268E48B72129020C008241B8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E48B62129020C008241B8 /* ProductListViewController.swift */; };
+		26C446C121290B3200B3FBDE /* APIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C446C021290B3200B3FBDE /* APIInfo.swift */; };
 		2D7B9993585C75ECB74A5BA3 /* Pods_MarketLeftOver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA486C7A2437D9FF601B94AA /* Pods_MarketLeftOver.framework */; };
 		423993AB2128AFC700EE0799 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 423993A82128AFC600EE0799 /* Poppins-Medium.otf */; };
 		423993AC2128AFC700EE0799 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 423993A92128AFC600EE0799 /* Poppins-SemiBold.otf */; };
@@ -50,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		1E3B49743379ACE8A01A9709 /* Pods-MarketLeftOver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketLeftOver.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver.release.xcconfig"; sourceTree = "<group>"; };
+		265B49F7212917D500236FEE /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		268E4853212896AF008241B8 /* MarketLeftOver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketLeftOver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		268E4856212896AF008241B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		268E485B212896AF008241B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		268E48AA21290149008241B8 /* ShoppingCartService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartService.swift; sourceTree = "<group>"; };
 		268E48B4212901CF008241B8 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductTableViewCell.swift; path = MarketLeftOver/Presentation/Cells/ProductTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		268E48B62129020C008241B8 /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		26C446C021290B3200B3FBDE /* APIInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInfo.swift; sourceTree = "<group>"; };
 		423993A82128AFC600EE0799 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		423993A92128AFC600EE0799 /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		423993AA2128AFC700EE0799 /* Poppins-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.otf"; sourceTree = "<group>"; };
@@ -98,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2479D8B9444B6D5340ED4542 /* BuildFile in Frameworks */,
+				2479D8B9444B6D5340ED4542 /* (null) in Frameworks */,
 				2D7B9993585C75ECB74A5BA3 /* Pods_MarketLeftOver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				268E48A521290149008241B8 /* ServiceFactory.swift */,
+				26C446C021290B3200B3FBDE /* APIInfo.swift */,
 				268E48B821290264008241B8 /* ServiceImplementation */,
 				268E48B12129015F008241B8 /* ServiceImplementationMock */,
 				268E487821289E81008241B8 /* ServicesProtocols */,
@@ -236,6 +241,7 @@
 			children = (
 				268E48A821290149008241B8 /* MarketService.swift */,
 				268E48AA21290149008241B8 /* ShoppingCartService.swift */,
+				265B49F7212917D500236FEE /* ProductService.swift */,
 			);
 			path = ServiceImplementation;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				268E48842128A93E008241B8 /* ProductServiceProtocol.swift in Sources */,
 				268E48AE2129014A008241B8 /* MarketService.swift in Sources */,
 				268E48B5212901CF008241B8 /* ProductTableViewCell.swift in Sources */,
+				265B49F8212917D500236FEE /* ProductService.swift in Sources */,
 				423993C52128DDCD00EE0799 /* CustomLabel.swift in Sources */,
 				268E48B72129020C008241B8 /* ProductListViewController.swift in Sources */,
 				423993BF2128CBE800EE0799 /* MarketListController.swift in Sources */,
@@ -426,6 +433,7 @@
 				268E487C2128A0C0008241B8 /* Product.swift in Sources */,
 				423993CB2128EDF300EE0799 /* CheckoutController.swift in Sources */,
 				268E48AF2129014A008241B8 /* MarketServiceMock.swift in Sources */,
+				26C446C121290B3200B3FBDE /* APIInfo.swift in Sources */,
 				423993BD2128C83C00EE0799 /* MarketDetailsTableCell.swift in Sources */,
 				268E487E2128A355008241B8 /* Category.swift in Sources */,
 				268E48B02129014A008241B8 /* ShoppingCartService.swift in Sources */,
@@ -576,7 +584,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62VCTXVB8;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.unicamp.alexandremestre.MarketLeftOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -592,7 +603,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62VCTXVB8;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.unicamp.alexandremestre.MarketLeftOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

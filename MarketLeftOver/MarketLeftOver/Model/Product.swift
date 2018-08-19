@@ -10,18 +10,25 @@ import UIKit
 
 class Product: NSObject, Codable {
 
-    var id: String
+    var id: Int
     var name: String
-    var brand: String
-    var dueDate: Date
+    var brand: String?
+    private var dueDateString: String
+    
+    var dueDate: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.setLocalizedDateFormatFromTemplate("dd/MM/yyyy")
+        return dateFormatter.date(from: self.dueDateString)
+    }
+    
     var originalPrice: Double
     var currentPrice: Double
     var imageURL: URL?
     
-    init(id: String,
+    init(id: Int,
          name: String,
          brand: String,
-         dueDate: Date,
+         dueDateString: String,
          originalPrice: Double,
          currentPrice: Double,
          imageURL: URL?) {
@@ -29,12 +36,20 @@ class Product: NSObject, Codable {
         self.id = id
         self.name = name
         self.brand = brand
-        self.dueDate = dueDate
+        self.dueDateString = dueDateString
         self.originalPrice = originalPrice
         self.currentPrice = currentPrice
         self.imageURL = imageURL
         
     }
     
+    enum CodingKeys: String, CodingKey {
+        case id = "productId"
+        case name = "productName"
+        case dueDateString = "expirationDate"
+        case originalPrice = "originalPrice"
+        case currentPrice = "price"
+        case imageURL = "imageUrl"
+    }
     
 }
