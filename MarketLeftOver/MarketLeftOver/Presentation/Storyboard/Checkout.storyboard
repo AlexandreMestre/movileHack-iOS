@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Light.otf">
+            <string>Poppins-Light</string>
+        </array>
         <array key="Poppins-SemiBold.otf">
             <string>Poppins-SemiBold</string>
         </array>
@@ -144,6 +147,7 @@
                                 <rect key="frame" x="94" y="509" width="186" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.84313725490000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="17"/>
                                 <state key="normal" title="FINALIZAR">
                                     <color key="titleColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>

@@ -106,7 +106,7 @@
                 <viewControllerPlaceholder storyboardName="MarketDetails" id="lce-PU-YNB" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRk-ni-HnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="667" y="145"/>
+            <point key="canvasLocation" x="665" y="149"/>
         </scene>
     </scenes>
     <resources>

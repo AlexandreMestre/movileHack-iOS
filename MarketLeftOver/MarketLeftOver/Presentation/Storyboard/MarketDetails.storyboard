@@ -145,7 +145,7 @@
                 <viewControllerPlaceholder storyboardName="ShoppingCart" id="nlh-zq-5Mo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrh-nM-3IK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="99"/>
+            <point key="canvasLocation" x="779" y="125"/>
         </scene>
     </scenes>
 </document>
