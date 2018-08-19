@@ -33,7 +33,7 @@ class MarketDetailsController: UIViewController {
         
         if let market = self.market {
             
-            navigationTitle = market.name
+            setupNavigationBar(market)
             
             ServiceFactory.marketService().categories(of: market) { (categories) in
                 if let categories = categories {
@@ -69,6 +69,13 @@ class MarketDetailsController: UIViewController {
         }
     }
     
+    func setupNavigationBar(_ market: Market) {
+        navigationTitle = market.name
+        let cartButton = UIBarButtonItem(image: #imageLiteral(resourceName: "cart"), style: .plain, target: self, action: #selector(self.cartButtonTouched))
+        cartButton.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.navigationItem.rightBarButtonItem = cartButton
+    }
+    
     func presentItemAddedFeedbackView() {
         self.feedBackViewTopConstraint.constant = CGFloat(itemAddedFeedBackViewHeight)
         
@@ -80,6 +87,10 @@ class MarketDetailsController: UIViewController {
                 self.view.layoutIfNeeded()
             }, completion: nil)
         }
+    }
+    
+    @objc func cartButtonTouched() {
+        self.performSegue(withIdentifier: "showShoppingCart", sender: nil)
     }
 }
 
