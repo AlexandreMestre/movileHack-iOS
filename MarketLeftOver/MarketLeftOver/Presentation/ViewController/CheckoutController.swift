@@ -22,15 +22,11 @@ class CheckoutController: UIViewController {
         let dismissTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector (dismissKeyboard))
         dismissTap.cancelsTouchesInView = false
         view.addGestureRecognizer(dismissTap)
-
-        // Do any additional setup after loading the view.
     }
-
 
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-
     
     @IBAction func pressed(_ sender: Any) {
         performSegue(withIdentifier: "modalShowUp", sender: nil)

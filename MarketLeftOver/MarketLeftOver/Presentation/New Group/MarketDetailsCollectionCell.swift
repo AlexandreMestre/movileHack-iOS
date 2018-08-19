@@ -22,6 +22,5 @@ class MarketDetailsCollectionCell: UICollectionViewCell {
     @IBAction func bestDealPressed(_ sender: Any) {
         print("Best Deal Pressed")
     }
-
 }
 

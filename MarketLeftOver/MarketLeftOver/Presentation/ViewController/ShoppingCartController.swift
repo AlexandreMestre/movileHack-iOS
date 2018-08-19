@@ -15,6 +15,7 @@ class ShoppingCartController: UIViewController {
     var tableViewCellHeight = 66.0
     var tableViewHeaderHeight = 45.0
     var cartCellID = "shoppingCartCell"
+    var navigationTitle = "Pedido"
 
     @IBOutlet weak var finishOrderButton: UIButton!
 
@@ -22,13 +23,13 @@ class ShoppingCartController: UIViewController {
         super.viewDidLoad()
 
         finishOrderButton.layer.cornerRadius = 20
-        // Do any additional setup after loading the view.
+        navigationItem.title = navigationTitle
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func finishOrderPressed(_ sender: Any) {
         performSegue(withIdentifier: "goToCheckout", sender: nil)
     }

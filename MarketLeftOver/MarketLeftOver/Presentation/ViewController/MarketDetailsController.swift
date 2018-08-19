@@ -17,14 +17,20 @@ class MarketDetailsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.title = navigationTitle
-
+        setupNavBar()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+
+    func setupNavBar() {
+        self.navigationItem.title = navigationTitle
+
+        if let font = UIFont(name: "Poppins-Semibold", size: 17) {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Poppins-Semibold", size: 17)!]
+            print("worked")
+        }
     }
 }
 

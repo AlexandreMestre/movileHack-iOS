@@ -13,15 +13,11 @@ class FinishedModalController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        button.layer.cornerRadius = 15
-
-        // Do any additional setup after loading the view.
+        button.layer.cornerRadius = 18
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
         print("Pressed")
         performSegue(withIdentifier: "unwindToMarketList", sender: self)
     }
-
 }

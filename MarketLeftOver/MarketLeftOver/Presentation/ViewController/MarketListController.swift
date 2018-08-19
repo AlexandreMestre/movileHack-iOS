@@ -19,8 +19,8 @@ class MarketListController: UIViewController {
         setUpNavBar()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewWillAppear(_ animated: Bool) {
+        setupNavBarFont()
     }
 
     func setUpNavBar() {
@@ -28,6 +28,18 @@ class MarketListController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationItem.title = "XEPA!"
+
+        setupNavBarFont()
+
+    }
+
+    func setupNavBarFont() {
+        if let font = UIFont(name: "ComicPanels", size: 25) {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "ComicPanels",
+                                                                                                               size: 25)!]
+            print("worked")
+        }
     }
 
     @IBAction func unwindToMarketList(segue:UIStoryboardSegue) { }
@@ -41,8 +53,9 @@ extension MarketListController: UICollectionViewDataSource, UICollectionViewDele
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: listCellID, for: indexPath) as? MarketListCollectionCell {
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: listCellID,
+                                                         for: indexPath) as? MarketListCollectionCell {
+            return cell
         }
         return MarketListCollectionCell()
     }
@@ -51,6 +64,4 @@ extension MarketListController: UICollectionViewDataSource, UICollectionViewDele
         print(indexPath.row)
         performSegue(withIdentifier: "showMarketDetails", sender: nil)
     }
-
-    
 }
