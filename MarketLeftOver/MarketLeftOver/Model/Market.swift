@@ -11,31 +11,35 @@ import CoreLocation
 
 class Market: NSObject, Codable {
     
-    var id: String
+    var id: Int
     var name: String
     var email: String
     var phoneNumber: String
     var CNPJ: String
     var logoImageURL: URL?
-    private var latitude: Double
-    private var longitude: Double
+    private var latitude: String
+    private var longitude: String
     
     var location: CLLocation? {
-        if let longitude = CLLocationDegrees(exactly: self.longitude),
-            let latitude = CLLocationDegrees(exactly: self.latitude) {
+        guard let numLatitude = Double(self.latitude), let numLongitude = Double(self.longitude) else {
+            return nil
+        }
+        
+        if let longitude = CLLocationDegrees(exactly: numLongitude),
+            let latitude = CLLocationDegrees(exactly: numLatitude) {
             return CLLocation(latitude: latitude, longitude: longitude)
         }
         
         return nil
     }
 
-    init(id: String,
+    init(id: Int,
          name: String,
          email: String,
          phoneNumber: String,
          CNPJ: String,
-         latitude: Double,
-         longitude: Double,
+         latitude: String,
+         longitude: String,
          logoImageURL: URL?) {
         
         self.id = id
@@ -49,13 +53,13 @@ class Market: NSObject, Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case id
-        case name
+        case id = "marketId"
+        case name = "marketName"
         case email
-        case phoneNumber
+        case phoneNumber = "contact"
         case latitude
         case longitude
-        case CNPJ
-        case logoImageURL
+        case CNPJ = "cnpj"
+        case logoImageURL = "logoUrl"
     }
 }
