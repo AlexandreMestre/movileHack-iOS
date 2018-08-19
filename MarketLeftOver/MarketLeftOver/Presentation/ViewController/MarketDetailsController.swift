@@ -12,7 +12,7 @@ class MarketDetailsController: UIViewController {
 
     var tableViewCellHeight = 66.0
     var tableViewHeaderHeight = 45.0
-    var navigationTitle = "Nome do mercado"
+    var navigationTitle = "Mercado"
     let listCellID = "cellList"
     
     var market: Market?

@@ -145,6 +145,7 @@
                     </view>
                     <connections>
                         <outlet property="finishOrderButton" destination="jeo-lC-sfX" id="9VR-0q-wgE"/>
+                        <outlet property="itensInCartTableView" destination="KB1-2o-paJ" id="me1-Rk-FGE"/>
                         <outlet property="orderValueLabel" destination="opQ-QY-ogg" id="ALB-dY-6OI"/>
                         <segue destination="4Qd-Vy-v3D" kind="show" identifier="goToCheckout" id="gDd-Wk-8XQ"/>
                     </connections>

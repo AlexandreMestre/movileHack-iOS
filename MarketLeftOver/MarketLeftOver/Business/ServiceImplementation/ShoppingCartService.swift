@@ -17,7 +17,7 @@ class ShoppingCartService: ShoppingCartServiceProtocol {
     private var userShoppingCart = ShoppingCart(itens: [])
     
     func shoppingCart() -> ShoppingCart {
-        return ShoppingCart(itens: [])
+        return userShoppingCart
     }
     
     func add(product: Product, quantity: Int) {
