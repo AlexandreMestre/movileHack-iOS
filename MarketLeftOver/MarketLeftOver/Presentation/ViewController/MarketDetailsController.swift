@@ -9,20 +9,17 @@
 import UIKit
 
 class MarketDetailsController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var collectionView: UICollectionView!
 
     var tableViewCellHeight = 66.0
     var tableViewHeaderHeight = 45.0
     var navigationTitle = "Nome do mercado"
+    var listCellID = "cellList"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = navigationTitle
-       
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +34,7 @@ extension MarketDetailsController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cellList") as? MarketDetailsTableCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: listCellID) as? MarketDetailsTableCell {
             cell.categoryNameLabel.text = "Section \(indexPath.row)"
             return cell
         }

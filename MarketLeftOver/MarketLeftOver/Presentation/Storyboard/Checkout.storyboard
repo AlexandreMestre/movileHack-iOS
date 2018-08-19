@@ -144,13 +144,16 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-uS-oR9">
-                                <rect key="frame" x="94" y="509" width="186" height="42"/>
+                                <rect key="frame" x="110" y="509" width="155" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.84313725490000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                 <state key="normal" title="FINALIZAR">
                                     <color key="titleColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressed:" destination="QfE-eB-rz7" eventType="touchUpInside" id="1FR-dM-2T0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -158,11 +161,20 @@
                     </view>
                     <connections>
                         <outlet property="finishButton" destination="vRf-uS-oR9" id="Wxw-Ab-nw0"/>
+                        <segue destination="hlR-V4-Mfy" kind="presentation" identifier="modalShowUp" id="wfm-tb-cfj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMt-B2-ItB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="108" y="161.46926536731635"/>
+        </scene>
+        <!--FinishedModal-->
+        <scene sceneID="Xx4-0B-DAq">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="finishedModal" storyboardName="FinishedModal" id="hlR-V4-Mfy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6lY-tn-fJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="161"/>
         </scene>
     </scenes>
 </document>

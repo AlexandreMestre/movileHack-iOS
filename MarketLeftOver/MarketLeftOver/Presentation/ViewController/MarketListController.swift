@@ -11,18 +11,26 @@ import UIKit
 class MarketListController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
+
+    var listCellID = "marketListCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpNavBar()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    func setUpNavBar() {
         navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.84, blue:0.34, alpha:1.0)
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    @IBAction func unwindToMarketList(segue:UIStoryboardSegue) { }
 
 }
 
@@ -33,7 +41,7 @@ extension MarketListController: UICollectionViewDataSource, UICollectionViewDele
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "marketListCell", for: indexPath) as? MarketListCollectionCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: listCellID, for: indexPath) as? MarketListCollectionCell {
         return cell
         }
         return MarketListCollectionCell()

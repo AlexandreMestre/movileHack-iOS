@@ -54,12 +54,13 @@ class ProductListViewController: UIViewController {
     }
     
     func setupSearchController() {
+    
         self.productListTableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
         definesPresentationContext = true
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Buscar produtos"
-        searchController.searchBar.barTintColor = #colorLiteral(red: 0.9960784314, green: 0.8705882353, blue: 0.4588235294, alpha: 1)
+        searchController.searchBar.barTintColor = #colorLiteral(red: 0.9960784314, green: 0.8431372549, blue: 0.337254902, alpha: 1)
     }
     
     @objc func cartButtonTouched() {
