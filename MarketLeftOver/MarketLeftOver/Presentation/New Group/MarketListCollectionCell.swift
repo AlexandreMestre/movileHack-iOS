@@ -9,7 +9,9 @@
 import UIKit
 
 class MarketListCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var marketLogo: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -198,6 +198,8 @@
                         <viewLayoutGuide key="safeArea" id="haH-aj-xzc"/>
                     </view>
                     <connections>
+                        <outlet property="bestDealsCollectionView" destination="xSW-md-lVj" id="LcV-83-brZ"/>
+                        <outlet property="categoriesTableView" destination="LhZ-Gk-6hF" id="nox-4e-rWC"/>
                         <segue destination="nlh-zq-5Mo" kind="show" identifier="showProductList" id="475-7o-0d6"/>
                     </connections>
                 </viewController>

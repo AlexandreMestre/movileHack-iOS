@@ -32,7 +32,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Mz-IP-ija">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Mz-IP-ija">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="7" id="h8V-ue-icG">
@@ -49,7 +49,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="167" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXh-se-5GX" customClass="CardView" customModule="MarketLeftOver" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXh-se-5GX" customClass="CardView" customModule="MarketLeftOver" customModuleProvider="target">
                                                     <rect key="frame" x="7" y="6" width="153" height="127"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
@@ -58,14 +58,24 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5TX-hd-JGF">
+                                                    <rect key="frame" x="14" y="12" width="139" height="114"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="iXh-se-5GX" firstAttribute="top" secondItem="1Nm-bw-Tbf" secondAttribute="top" constant="6" id="0O1-p4-5xp"/>
                                             <constraint firstAttribute="trailing" secondItem="iXh-se-5GX" secondAttribute="trailing" constant="7" id="1uo-bk-5wv"/>
+                                            <constraint firstItem="5TX-hd-JGF" firstAttribute="leading" secondItem="iXh-se-5GX" secondAttribute="leading" constant="7" id="MnN-Zf-0yF"/>
+                                            <constraint firstItem="5TX-hd-JGF" firstAttribute="trailing" secondItem="iXh-se-5GX" secondAttribute="trailing" constant="-7" id="VvZ-Rr-7lK"/>
                                             <constraint firstAttribute="bottom" secondItem="iXh-se-5GX" secondAttribute="bottom" constant="7" id="fsU-hj-hyD"/>
                                             <constraint firstItem="iXh-se-5GX" firstAttribute="leading" secondItem="1Nm-bw-Tbf" secondAttribute="leading" constant="7" id="rD0-Do-qee"/>
+                                            <constraint firstItem="5TX-hd-JGF" firstAttribute="top" secondItem="iXh-se-5GX" secondAttribute="top" constant="6" id="us5-5o-WpM"/>
+                                            <constraint firstItem="5TX-hd-JGF" firstAttribute="bottom" secondItem="iXh-se-5GX" secondAttribute="bottom" constant="-7" id="vnR-fO-bQv"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="marketLogo" destination="5TX-hd-JGF" id="tAa-VS-l15"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -91,6 +101,7 @@
                         <viewLayoutGuide key="safeArea" id="oGU-52-DP4"/>
                     </view>
                     <connections>
+                        <outlet property="marketsCollectionView" destination="2Mz-IP-ija" id="CG8-dD-gof"/>
                         <segue destination="lce-PU-YNB" kind="show" identifier="showMarketDetails" id="Akn-rC-1Gp"/>
                     </connections>
                 </viewController>

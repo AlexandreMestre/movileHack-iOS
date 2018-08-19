@@ -13,10 +13,39 @@ class MarketDetailsController: UIViewController {
     var tableViewCellHeight = 66.0
     var tableViewHeaderHeight = 45.0
     var navigationTitle = "Nome do mercado"
-    var listCellID = "cellList"
-
+    let listCellID = "cellList"
+    
+    var market: Market?
+    
+    var categories = [Category]()
+    
+    var bestDeals = [Product]()
+    var bestDeasCollectionView: UICollectionView?
+    
+    @IBOutlet weak var categoriesTableView: UITableView!
+    @IBOutlet weak var bestDealsCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let market = self.market {
+            
+            navigationTitle = market.name
+            
+            ServiceFactory.marketService().categories(of: market) { (categories) in
+                if let categories = categories {
+                    self.categories = categories
+                    self.categoriesTableView.reloadData()
+                }
+            }
+            
+            ServiceFactory.productService().bestProducts(from: market) { (products) in
+                if let products = products {
+                    self.bestDeals = products
+                    self.bestDealsCollectionView.reloadData()
+                }
+            }
+        }
 
         self.navigationItem.title = navigationTitle
 
@@ -26,16 +55,39 @@ class MarketDetailsController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showProductList" {
+            if let destination = segue.destination as? ProductListViewController,
+                let category = sender as? Category {
+                destination.market = self.market
+                destination.category = category
+            }
+        }
+    }
 }
 
 extension MarketDetailsController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return self.categories.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: listCellID) as? MarketDetailsTableCell {
-            cell.categoryNameLabel.text = "Section \(indexPath.row)"
+            let category = categories[indexPath.row]
+            
+            cell.categoryNameLabel.text = category.name
+            
+            if let imageURL = category.iconURL {
+                // TODO: - load image using kingFisher
+                do {
+                    let data = try Data(contentsOf: imageURL)
+                    cell.categoryIconImage.image = UIImage(data: data)
+                } catch {
+                    
+                }
+            }
+            
             return cell
         }
         return MarketDetailsTableCell()
@@ -66,23 +118,43 @@ extension MarketDetailsController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-        performSegue(withIdentifier: "showProductList", sender: nil)
+        performSegue(withIdentifier: "showProductList", sender: self.categories[indexPath.row])
     }
 }
 
 extension MarketDetailsController: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.bestDeals.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? MarketDetailsCollectionCell {
-        return cell
+            let product = bestDeals[indexPath.row]
+            
+            cell.bestDealNameLabel.text = product.name
+            
+            if let imageURL = product.imageURL {
+                // TODO: - load image using kingFisher
+                do {
+                    let data = try Data(contentsOf: imageURL)
+                    cell.bestDealImage.image = UIImage(data: data)
+                } catch {
+                }
+            }
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.setLocalizedDateFormatFromTemplate("dd/MM/yyyy")
+            if let date = product.dueDate {
+                cell.bestDealDueDateLabel.text = "\(dateFormatter.string(from: date))"
+            } else {
+                cell.bestDealDueDateLabel.text = "----"
+            }
+            cell.bestDealPriceLabel.text = String(format: "R$%.02f", product.currentPrice)
+
+            return cell
         }
+        
         return MarketDetailsCollectionCell()
     }
-
-    
 }
