@@ -1,5 +1,5 @@
 //
-//  MarketDetailsController.swift
+//  ShoppingCartController.swift
 //  MarketLeftOver
 //
 //  Created by Larissa Ganaha on 18/08/18.
@@ -8,20 +8,19 @@
 
 import UIKit
 
-class MarketDetailsController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var collectionView: UICollectionView!
+class ShoppingCartController: UIViewController {
+    @IBOutlet weak var totalValueLabel: UILabel!
+    @IBOutlet weak var orderValueLabel: UILabel!
 
-    var tableViewCellHeight = 66.0
+    var tableViewCellHeight = 66
     var tableViewHeaderHeight = 45.0
-    var navigationTitle = "Nome do mercado"
+
+    @IBOutlet weak var finishOrderButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = navigationTitle
-       
-
+        finishOrderButton.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
 
@@ -29,23 +28,22 @@ class MarketDetailsController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func finishOrderPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToCheckout", sender: nil)
+    }
 }
 
-extension MarketDetailsController: UITableViewDelegate, UITableViewDataSource{
+extension ShoppingCartController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cellList") as? MarketDetailsTableCell {
-            cell.categoryNameLabel.text = "Section \(indexPath.row)"
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCartCell", for: indexPath) as? ShoppingCartCell {
+            cell.productNameLabel.text = "Produto \(indexPath.row)"
             return cell
         }
-        return MarketDetailsTableCell()
-
-    }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return ShoppingCartCell()
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -53,7 +51,7 @@ extension MarketDetailsController: UITableViewDelegate, UITableViewDataSource{
         let titleLabel = UILabel()
         titleLabel.textAlignment = .left
         titleLabel.font = UIFont(name: "Poppins-SemiBold", size: 18)
-        titleLabel.text = "Categorias"
+        titleLabel.text = "Pedido"
         titleLabel.frame = CGRect(x: 20, y:10, width: view.bounds.width, height: 30)
         headerView.backgroundColor = .white
         headerView.addSubview(titleLabel)
@@ -68,24 +66,21 @@ extension MarketDetailsController: UITableViewDelegate, UITableViewDataSource{
         return CGFloat(tableViewCellHeight)
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-        performSegue(withIdentifier: "showProductList", sender: nil)
-    }
-}
-
-extension MarketDetailsController: UICollectionViewDataSource, UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? MarketDetailsCollectionCell {
-        return cell
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            // TODO: handle delete
+            tableView.reloadData()
+            // TODO: update orderValueLabel
         }
-        return MarketDetailsCollectionCell()
     }
 
-    
+
 }
