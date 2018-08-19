@@ -24,6 +24,7 @@ class CheckoutController: UIViewController {
         view.addGestureRecognizer(dismissTap)
     }
 
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
