@@ -48,9 +48,7 @@ class MarketListController: UIViewController {
 
     func setupNavBarFont() {
         if let font = UIFont(name: "ComicPanels", size: 25) {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "ComicPanels",
-                                                                                                               size: 25)!]
-            print("worked")
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: font]
         }
     }
 

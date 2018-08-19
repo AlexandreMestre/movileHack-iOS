@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2479D8B9444B6D5340ED4542 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		2479D8B9444B6D5340ED4542 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		265B49F8212917D500236FEE /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49F7212917D500236FEE /* ProductService.swift */; };
 		265B49FA2129240800236FEE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49F92129240800236FEE /* UIView.swift */; };
 		265B49FD2129243A00236FEE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B49FC2129243A00236FEE /* UITableView.swift */; };
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2479D8B9444B6D5340ED4542 /* (null) in Frameworks */,
+				2479D8B9444B6D5340ED4542 /* BuildFile in Frameworks */,
 				2D7B9993585C75ECB74A5BA3 /* Pods_MarketLeftOver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +319,7 @@
 				268E4850212896AF008241B8 /* Frameworks */,
 				268E4851212896AF008241B8 /* Resources */,
 				7C93D7E41F8673CCD5EF0E0D /* [CP] Embed Pods Frameworks */,
+				AFD2173D9BFF42FB1F0CE720 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -423,6 +424,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFD2173D9BFF42FB1F0CE720 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarketLeftOver/Pods-MarketLeftOver-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -600,12 +616,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7W6V69HBWC;
+				DEVELOPMENT_TEAM = A62VCTXVB8;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.unicamp.alexandremestre.MarketLeftOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -619,12 +632,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7W6V69HBWC;
+				DEVELOPMENT_TEAM = A62VCTXVB8;
 				INFOPLIST_FILE = MarketLeftOver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.unicamp.alexandremestre.MarketLeftOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
